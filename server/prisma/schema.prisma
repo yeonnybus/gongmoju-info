@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Ipo {
+  id          String   @id @default(uuid())
+  name        String
+  market      String?  // 코스피/코스닥
+  code        String?  // 종목코드
+  
+  // 일정
+  forecastStart DateTime?
+  forecastEnd   DateTime?
+  subStart      DateTime?
+  subEnd        DateTime?
+  refundDate    DateTime?
+  listDate      DateTime?
+
+  // 가격 및 정보
+  bandLow       Int?
+  bandHigh      Int?
+  offerPrice    Int?
+  competition   String?
+  underwriter   String?
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Subscriber {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
