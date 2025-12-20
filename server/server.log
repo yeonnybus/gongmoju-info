@@ -1,0 +1,20 @@
+
+> server@0.0.1 start:dev /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server
+> nest start --watch
+
+[2J[3J[H[[90m오후 4:34:18[0m] Starting compilation in watch mode...
+
+[[90m오후 4:34:20[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:34:20 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:34:20 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +4ms[39m
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:34:20 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:34:20 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:34:20 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:34:20 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:34:20 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:34:20 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1ms[39m
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:34:55 [32m    LOG[39m [38;5;3m[CrawlerService] [39m[32mStarting crawl from http://www.38.co.kr/html/fund/index.htm?o=k...[39m
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:34:55 [32m    LOG[39m [38;5;3m[CrawlerService] [39m[32mCrawled 30 items.[39m
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:35:16 [32m    LOG[39m [38;5;3m[CrawlerService] [39m[32mStarting crawl from http://www.38.co.kr/html/fund/index.htm?o=k...[39m
+[32m[Nest] 13081  - [39m2025. 12. 20. 오후 4:35:19 [32m    LOG[39m [38;5;3m[CrawlerService] [39m[32mCrawled 30 items.[39m

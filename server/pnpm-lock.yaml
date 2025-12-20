@@ -23,15 +23,15 @@ importers:
       '@prisma/client':
         specifier: ^6.19.1
         version: 6.19.1(prisma@6.19.1(typescript@5.9.3))(typescript@5.9.3)
-      '@types/cron':
-        specifier: ^2.4.3
-        version: 2.4.3
       axios:
         specifier: ^1.13.2
         version: 1.13.2
       cheerio:
         specifier: ^1.1.2
         version: 1.1.2
+      iconv-lite:
+        specifier: ^0.7.1
+        version: 0.7.1
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
@@ -837,10 +837,6 @@ packages:
   '@types/cookiejar@2.1.5':
     resolution: {integrity: sha512-he+DHOWReW0nghN24E1WUqM0efK4kI9oTqDm6XmK8ZPe2djZ90BSNdGnIyCLzCPw7/pogPlGbzI2wHGGmi4O/Q==}
 
-  '@types/cron@2.4.3':
-    resolution: {integrity: sha512-ViRBkoZD9Rk0hGeMdd2GHGaOaZuH9mDmwsE5/Zo53Ftwcvh7h9VJc8lIt2wdgEwS4EW5lbtTX6vlE0idCLPOyA==}
-    deprecated: This is a stub types definition. cron provides its own type definitions, so you do not need this installed.
-
   '@types/eslint-scope@3.7.7':
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
 
@@ -1495,10 +1491,6 @@ packages:
 
   cron@4.3.5:
     resolution: {integrity: sha512-hKPP7fq1+OfyCqoePkKfVq7tNAdFwiQORr4lZUHwrf0tebC65fYEeWgOrXOL6prn1/fegGOdTfrM6e34PJfksg==}
-    engines: {node: '>=18.x'}
-
-  cron@4.4.0:
-    resolution: {integrity: sha512-fkdfq+b+AHI4cKdhZlppHveI/mgz2qpiYxcm+t5E5TsxX7QrLS1VE0+7GENEk9z0EeGPcpSciGv6ez24duWhwQ==}
     engines: {node: '>=18.x'}
 
   cross-spawn@7.0.6:
@@ -4128,10 +4120,6 @@ snapshots:
 
   '@types/cookiejar@2.1.5': {}
 
-  '@types/cron@2.4.3':
-    dependencies:
-      cron: 4.4.0
-
   '@types/eslint-scope@3.7.7':
     dependencies:
       '@types/eslint': 9.6.1
@@ -4841,11 +4829,6 @@ snapshots:
   create-require@1.1.1: {}
 
   cron@4.3.5:
-    dependencies:
-      '@types/luxon': 3.7.1
-      luxon: 3.7.2
-
-  cron@4.4.0:
     dependencies:
       '@types/luxon': 3.7.1
       luxon: 3.7.2
