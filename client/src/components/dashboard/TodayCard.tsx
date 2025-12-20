@@ -1,13 +1,35 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+import { getIpoList } from '@/lib/api';
+import { useQuery } from '@tanstack/react-query';
 import { Bell } from "lucide-react";
 
 export function TodayCard() {
-  // TODO: Fetch real data from API
-  const todayIpo = null; // Mock: null means no event today
+  const { data: ipoList, isLoading } = useQuery({
+        queryKey: ['ipoList'],
+        queryFn: getIpoList,
+  });
 
-  if (!todayIpo) {
+  if (isLoading) {
+      return <Skeleton className="h-48 w-full rounded-xl" />;
+  }
+
+  // Find "Today's" highlight
+  // Prioritize: Open for Subscription > Listing Today
+  const today = new Date();
+  
+  const todayHighlight = ipoList?.find((item: any) => {
+      if (!item.subStart || !item.subEnd) return false;
+      const start = new Date(item.subStart);
+      const end = new Date(item.subEnd);
+      return today >= start && today <= end;
+  });
+
+  if (!todayHighlight) {
     return (
       <Card className="w-full bg-gradient-to-br from-gray-900 to-gray-800 border-none text-white shadow-lg relative overflow-hidden">
          <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -translate-y-16 translate-x-16 blur-2xl"></div>
@@ -16,7 +38,7 @@ export function TodayCard() {
             오늘의 일정 🌙
           </CardTitle>
           <CardDescription className="text-gray-400">
-            오늘은 예정된 공모주 일정이 없습니다.
+            오늘은 진행 중인 청약이 없습니다.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -28,6 +50,8 @@ export function TodayCard() {
     );
   }
 
+  // Calculate D-Day or status
+  // For now simple display
   return (
     <Card className="w-full bg-gradient-to-br from-indigo-900 to-slate-900 border-none text-white shadow-xl relative overflow-hidden">
       {/* Background Effect */}
@@ -36,26 +60,26 @@ export function TodayCard() {
       <CardHeader>
         <div className="flex justify-between items-start">
             <Badge variant="secondary" className="bg-orange-500 hover:bg-orange-600 text-white border-none mb-2">
-                청약 마감 D-Day
+                청약 진행중
             </Badge>
             <Button size="icon" variant="ghost" className="text-gray-300 hover:text-white h-6 w-6">
                 <Bell size={16} />
             </Button>
         </div>
-        <CardTitle className="text-2xl font-bold tracking-tight">테크코퍼레이션</CardTitle>
+        <CardTitle className="text-2xl font-bold tracking-tight">{todayHighlight.name}</CardTitle>
         <CardDescription className="text-gray-300 font-medium">
-            확정공모가 15,000원
+            확정공모가 {todayHighlight.offerPrice ? `${Number(todayHighlight.offerPrice).toLocaleString()}원` : '미정'}
         </CardDescription>
       </CardHeader>
       
       <CardContent className="grid gap-3">
           <div className="flex justify-between items-center text-sm border-t border-white/10 pt-3">
               <span className="text-gray-400">경쟁률</span>
-              <span className="font-semibold text-accent-foreground text-yellow-400">1,240 : 1</span>
+              <span className="font-semibold text-accent-foreground text-yellow-400">{todayHighlight.competition || '-'}</span>
           </div>
           <div className="flex justify-between items-center text-sm">
               <span className="text-gray-400">주간사</span>
-              <span>한국투자증권, KB증권</span>
+              <span className="truncate max-w-[200px] text-right">{todayHighlight.underwriter}</span>
           </div>
       </CardContent>
     </Card>
