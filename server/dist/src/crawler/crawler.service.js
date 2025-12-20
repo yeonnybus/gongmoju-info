@@ -38,6 +38,9 @@ var __importStar = (this && this.__importStar) || (function () {
         return result;
     };
 })();
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -48,9 +51,14 @@ const common_1 = require("@nestjs/common");
 const axios_1 = __importDefault(require("axios"));
 const cheerio = __importStar(require("cheerio"));
 const iconv_lite_1 = __importDefault(require("iconv-lite"));
+const prisma_service_1 = require("../prisma/prisma.service");
 let CrawlerService = CrawlerService_1 = class CrawlerService {
+    prisma;
     logger = new common_1.Logger(CrawlerService_1.name);
     TARGET_URL = 'http://www.38.co.kr/html/fund/index.htm?o=k';
+    constructor(prisma) {
+        this.prisma = prisma;
+    }
     async scrapeIpoList() {
         this.logger.log(`Starting crawl from ${this.TARGET_URL}...`);
         try {
@@ -62,47 +70,122 @@ let CrawlerService = CrawlerService_1 = class CrawlerService {
             });
             const html = iconv_lite_1.default.decode(Buffer.from(response.data), 'EUC-KR');
             const $ = cheerio.load(html);
-            const ipoList = [];
-            $('table[summary="공모주 청약일정"] tbody tr').each((i, el) => {
-                const name = $(el).find('td[height="30"]').text().trim();
-                if (!name)
-                    return;
+            let count = 0;
+            const rows = $('table[summary="공모주 청약일정"] tbody tr');
+            for (let i = 0; i < rows.length; i++) {
+                const el = rows[i];
+                const nameRaw = $(el).find('td[height="30"]').text().trim();
+                if (!nameRaw)
+                    continue;
                 const tds = $(el).find('td');
                 const scheduleRaw = $(tds[1]).text().trim();
-                const offerPrice = $(tds[2]).text().trim();
-                const bandPrice = $(tds[3]).text().trim();
-                const competition = $(tds[4]).text().trim();
+                const offerPriceRaw = $(tds[2]).text().trim();
+                const bandPriceRaw = $(tds[3]).text().trim();
+                const competitionRaw = $(tds[4]).text().trim();
                 const underwriter = $(tds[5]).text().trim();
-                const [subStart, subEnd] = this.parseDates(scheduleRaw);
-                ipoList.push({
-                    name: name.replace('(유)', '').replace('(주)', '').trim(),
-                    subStart,
-                    subEnd,
-                    offerPrice,
-                    bandPrice,
-                    competition,
-                    underwriter,
-                });
-            });
-            this.logger.log(`Crawled ${ipoList.length} items.`);
-            return ipoList;
+                const name = nameRaw.replace('(유)', '').replace('(주)', '').trim();
+                const [subStart, subEnd] = this.parseDateRange(scheduleRaw);
+                const offerPrice = this.parsePrice(offerPriceRaw);
+                const { bandLow, bandHigh } = this.parseBandPrice(bandPriceRaw);
+                if (!name)
+                    continue;
+                try {
+                    await this.prisma.ipo.upsert({
+                        where: { name },
+                        update: {
+                            subStart,
+                            subEnd,
+                            offerPrice,
+                            bandLow,
+                            bandHigh,
+                            competition: competitionRaw,
+                            underwriter,
+                        },
+                        create: {
+                            name,
+                            subStart,
+                            subEnd,
+                            offerPrice,
+                            bandLow,
+                            bandHigh,
+                            competition: competitionRaw,
+                            underwriter,
+                        },
+                    });
+                    count++;
+                }
+                catch (e) {
+                    this.logger.error(`Failed to upsert ${name}: ${e.message}`);
+                }
+            }
+            this.logger.log(`Crawled and processed ${count} items.`);
+            return { count, message: 'Crawl successful' };
         }
         catch (error) {
             this.logger.error('Crawling failed', error);
             throw error;
         }
     }
-    parseDates(raw) {
+    parseDateRange(raw) {
         if (!raw.includes('~'))
             return [null, null];
         const parts = raw.split('~');
-        const startRaw = parts[0].trim();
-        let endRaw = parts[1].trim();
-        return [startRaw, endRaw];
+        const startStr = parts[0].trim();
+        let endStr = parts[1].trim();
+        const startDate = this.parseDateString(startStr);
+        let endDate = null;
+        if (startDate) {
+            if (endStr.length <= 5 && !endStr.includes(startDate.getFullYear().toString())) {
+                endDate = this.parseDateString(`${startDate.getFullYear()}.${endStr}`);
+                if (endDate && endDate < startDate) {
+                    endDate.setFullYear(endDate.getFullYear() + 1);
+                }
+            }
+            else {
+                endDate = this.parseDateString(endStr);
+            }
+        }
+        return [startDate, endDate];
+    }
+    parseDateString(str) {
+        const parts = str.split('.');
+        if (parts.length < 2)
+            return null;
+        let year = new Date().getFullYear();
+        let month = 0;
+        let day = 1;
+        if (parts.length === 3) {
+            year = parseInt(parts[0], 10);
+            month = parseInt(parts[1], 10) - 1;
+            day = parseInt(parts[2], 10);
+        }
+        else if (parts.length === 2) {
+            month = parseInt(parts[0], 10) - 1;
+            day = parseInt(parts[1], 10);
+        }
+        const date = new Date(year, month, day);
+        if (isNaN(date.getTime()))
+            return null;
+        return date;
+    }
+    parsePrice(raw) {
+        if (!raw || raw === '-')
+            return null;
+        return parseInt(raw.replace(/,/g, ''), 10) || null;
+    }
+    parseBandPrice(raw) {
+        if (!raw || !raw.includes('~'))
+            return { bandLow: null, bandHigh: null };
+        const parts = raw.split('~');
+        return {
+            bandLow: this.parsePrice(parts[0]),
+            bandHigh: this.parsePrice(parts[1]),
+        };
     }
 };
 exports.CrawlerService = CrawlerService;
 exports.CrawlerService = CrawlerService = CrawlerService_1 = __decorate([
-    (0, common_1.Injectable)()
+    (0, common_1.Injectable)(),
+    __metadata("design:paramtypes", [prisma_service_1.PrismaService])
 ], CrawlerService);
 //# sourceMappingURL=crawler.service.js.map

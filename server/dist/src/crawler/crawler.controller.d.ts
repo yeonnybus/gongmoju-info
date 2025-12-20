@@ -2,5 +2,8 @@ import { CrawlerService } from './crawler.service';
 export declare class CrawlerController {
     private readonly crawlerService;
     constructor(crawlerService: CrawlerService);
-    triggerCrawl(): Promise<any[]>;
+    triggerCrawl(): Promise<{
+        count: number;
+        message: string;
+    }>;
 }

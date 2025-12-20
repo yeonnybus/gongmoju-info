@@ -12,7 +12,7 @@ datasource db {
 
 model Ipo {
   id          String   @id @default(uuid())
-  name        String
+  name        String   @unique
   market      String?  // 코스피/코스닥
   code        String?  // 종목코드
   
