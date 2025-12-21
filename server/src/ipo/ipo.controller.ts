@@ -10,8 +10,8 @@ export class IpoController {
     return this.ipoService.findAll();
   }
 
-  @Get(':name')
-  findOne(@Param('name') name: string) {
-    return this.ipoService.findOne(name);
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.ipoService.findOne(id);
   }
 }

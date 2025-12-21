@@ -14,9 +14,9 @@ export class IpoService {
     });
   }
 
-  async findOne(name: string) {
+  async findOne(id: string) {
     return this.prisma.ipo.findUnique({
-      where: { name },
+      where: { id },
     });
   }
 }

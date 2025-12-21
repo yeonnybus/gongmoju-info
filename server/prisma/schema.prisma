@@ -31,6 +31,11 @@ model Ipo {
   competition   String?
   underwriter   String?
   
+  // New detail fields
+  lockupRate        String? // 의무보유확약비율
+  circulatingSupply String? // 공모 후 유통가능물량
+  otcPrice          String? // 장외가격 (can be ranges so String)
+  
   createdAt     DateTime @default(now())
   updatedAt     DateTime @updatedAt
 }
