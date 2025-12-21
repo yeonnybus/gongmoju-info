@@ -17,3 +17,13 @@ export const getIpoDetail = async (id: string) => {
   const response = await api.get(`/ipo/${id}`);
   return response.data;
 };
+
+export const requestVerificationCode = async (email: string) => {
+  const response = await api.post('/subscribers', { email });
+  return response.data;
+};
+
+export const verifySubscriber = async (email: string, code: string) => {
+  const response = await api.post('/subscribers/verify', { email, code });
+  return response.data;
+};

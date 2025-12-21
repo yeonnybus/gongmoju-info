@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
+import { requestVerificationCode, verifySubscriber } from "@/lib/api";
 import { CheckCircle, Loader2, Mail } from "lucide-react";
 import { useState } from 'react';
 import { toast } from "sonner";
@@ -22,12 +23,15 @@ export function EmailSubscription() {
     }
 
     setIsLoading(true);
-    // TODO: Call API to send email
-    await new Promise(resolve => setTimeout(resolve, 1000)); 
-    setIsLoading(false);
-
-    setIsDialogOpen(true);
-    toast.success("인증번호가 발송되었습니다! 메일함을 확인해주세요.");
+    try {
+      await requestVerificationCode(email);
+      setIsDialogOpen(true);
+      toast.success("인증번호가 발송되었습니다! 메일함을 확인해주세요.");
+    } catch (error) {
+      toast.error("인증번호 발송에 실패했습니다. 다시 시도해주세요.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   // 2. Verify Code
@@ -38,16 +42,19 @@ export function EmailSubscription() {
     }
 
     setIsLoading(true);
-    // TODO: Verify API
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setIsLoading(false);
-
-    setIsDialogOpen(false);
-    toast.success("구독이 완료되었습니다! 내일부터 리포트가 발송됩니다.", {
-        icon: <CheckCircle className="text-green-500" />,
-    });
-    setEmail("");
-    setVerifyCode("");
+    try {
+      await verifySubscriber(email, verifyCode);
+      setIsDialogOpen(false);
+      toast.success("구독이 완료되었습니다! 내일부터 리포트가 발송됩니다.", {
+          icon: <CheckCircle className="text-green-500" />,
+      });
+      setEmail("");
+      setVerifyCode("");
+    } catch (error) {
+      toast.error("인증번호가 올바르지 않습니다.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -57,9 +64,9 @@ export function EmailSubscription() {
           <div className="mx-auto bg-primary/10 p-3 rounded-full w-fit mb-2">
             <Mail className="h-6 w-6 text-primary" />
           </div>
-          <CardTitle className="text-lg">일일 리포트 구독</CardTitle>
+          <CardTitle className="text-lg">주간 리포트 구독</CardTitle>
           <CardDescription>
-            매일 아침 8시, 공모주 핵심 요약을 메일로 보내드려요.
+            매주 월요일 아침 9시, 공모주 핵심 요약을 메일로 보내드려요.
           </CardDescription>
         </CardHeader>
         <CardContent>
