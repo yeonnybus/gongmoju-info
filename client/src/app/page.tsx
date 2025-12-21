@@ -1,6 +1,7 @@
 import { EmailSubscription } from "@/components/dashboard/EmailSubscription";
 import { TodayCard } from "@/components/dashboard/TodayCard";
 import { WeeklyList } from "@/components/dashboard/WeeklyList";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <section className="space-y-3">
         <div className="flex justify-between items-end px-1">
             <h2 className="text-xl font-bold">다가오는 일정</h2>
-            <span className="text-sm text-muted-foreground hover:underline cursor-pointer">전체보기</span>
+            <Link href="/schedule" className="text-sm text-muted-foreground hover:underline cursor-pointer">전체보기</Link>
         </div>
         <WeeklyList />
       </section>
