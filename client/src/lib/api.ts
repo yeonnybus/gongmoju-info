@@ -12,3 +12,8 @@ export const getIpoList = async () => {
   const response = await api.get('/ipo');
   return response.data;
 };
+
+export const getIpoDetail = async (id: string) => {
+  const response = await api.get(`/ipo/${id}`);
+  return response.data;
+};

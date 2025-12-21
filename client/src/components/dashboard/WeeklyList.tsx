@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import { getIpoList } from '@/lib/api';
 import { useQuery } from '@tanstack/react-query';
+import Link from 'next/link';
 
 export function WeeklyList() {
     const { data: ipoList, isLoading } = useQuery({
@@ -58,30 +59,32 @@ export function WeeklyList() {
 
                  return (
                 <div key={item.id || index}>
-                    <div className="flex items-center py-4 px-1 hover:bg-accent/50 rounded-lg transition-colors cursor-pointer">
-                        {/* Date Badge */}
-                        <div className="flex flex-col items-center justify-center w-12 h-12 bg-secondary rounded-xl mr-4 shrink-0">
-                            <span className="text-xs font-bold text-gray-500">{month}월</span>
-                            <span className="text-sm font-extrabold">{day}</span>
-                        </div>
-                        
-                        {/* Info */}
-                        <div className="flex-1">
-                            <h4 className="font-semibold text-base">{item.name}</h4>
-                            <span className="text-xs text-muted-foreground">코스닥 | {item.offerPrice ? `${Number(item.offerPrice).toLocaleString()}원` : '미정'}</span>
-                        </div>
+                    <Link href={`/ipo/${item.id}`}>
+                        <div className="flex items-center py-4 px-1 hover:bg-accent/50 rounded-lg transition-colors cursor-pointer">
+                            {/* Date Badge */}
+                            <div className="flex flex-col items-center justify-center w-12 h-12 bg-secondary rounded-xl mr-4 shrink-0">
+                                <span className="text-xs font-bold text-gray-500">{month}월</span>
+                                <span className="text-sm font-extrabold">{day}</span>
+                            </div>
+                            
+                            {/* Info */}
+                            <div className="flex-1">
+                                <h4 className="font-semibold text-base">{item.name}</h4>
+                                <span className="text-xs text-muted-foreground">코스닥 | {item.offerPrice ? `${Number(item.offerPrice).toLocaleString()}원` : '미정'}</span>
+                            </div>
 
-                        {/* Status */}
-                        <div>
-                           {status === 'OPEN' ? (
-                               <Badge variant="default" className="bg-green-600 hover:bg-green-700">청약중</Badge>
-                           ) : status === 'CLOSED' ? (
-                               <Badge variant="secondary" className="text-gray-400">마감</Badge>
-                           ) : (
-                               <Badge variant="outline" className="text-gray-500">예정</Badge>
-                           )}
+                            {/* Status */}
+                            <div>
+                            {status === 'OPEN' ? (
+                                <Badge variant="default" className="bg-green-600 hover:bg-green-700">청약중</Badge>
+                            ) : status === 'CLOSED' ? (
+                                <Badge variant="secondary" className="text-gray-400">마감</Badge>
+                            ) : (
+                                <Badge variant="outline" className="text-gray-500">예정</Badge>
+                            )}
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                     {index < ipoList.length - 1 && <Separator className="my-1" />}
                 </div>
             )})}
