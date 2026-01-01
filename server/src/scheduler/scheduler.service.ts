@@ -12,8 +12,8 @@ export class SchedulerService {
     private readonly mailService: MailService,
   ) {}
 
-  // Run every Monday at 09:00 AM
-  @Cron('0 9 * * 1')
+  // Run every Monday at 08:30 AM KST
+  @Cron('30 8 * * 1', { timeZone: 'Asia/Seoul' })
   async sendWeeklyReportCron() {
     this.logger.log('Starting weekly report distribution...');
     
@@ -22,6 +22,7 @@ export class SchedulerService {
     const nextWeek = new Date(today);
     nextWeek.setDate(today.getDate() + 7);
 
+    // Queries
     const upcomingIpos = await this.prisma.ipo.findMany({
       where: {
         OR: [
@@ -32,8 +33,15 @@ export class SchedulerService {
       orderBy: { subStart: 'asc' },
     });
 
-    if (upcomingIpos.length === 0) {
-      this.logger.log('No upcoming IPOs this week. Skipping report.');
+    const upcomingListings = await this.prisma.ipo.findMany({
+        where: {
+             listDate: { gte: today, lt: nextWeek }
+        },
+        orderBy: { listDate: 'asc' },
+    });
+
+    if (upcomingIpos.length === 0 && upcomingListings.length === 0) {
+      this.logger.log('No upcoming IPOs or Listings this week. Skipping report.');
       return;
     }
 
@@ -42,25 +50,41 @@ export class SchedulerService {
       where: { isActive: true, isVerified: true },
     });
 
-    this.logger.log(`Found ${upcomingIpos.length} IPOs and ${subscribers.length} subscribers.`);
+    this.logger.log(`Found ${upcomingIpos.length} Subscriptions, ${upcomingListings.length} Listings, and ${subscribers.length} subscribers.`);
 
-    // 3. Send Emails (Simple text for now)
-    // In production, use a template engine or formatted HTML
+    // 3. Send Emails
     const reportHtml = `
-      <h1>[공모주 알리미] 이번 주 청약 일정</h1>
-      <p>이번 주(${today.toLocaleDateString()} ~ ${nextWeek.toLocaleDateString()})에 진행되는 공모주 일정입니다.</p>
+      <h1>[공모주 알리미] 이번 주 일정 안내</h1>
+      <p>이번 주(${today.toLocaleDateString()} ~ ${nextWeek.toLocaleDateString()}) 예정된 공모주 일정입니다.</p>
+      
+      ${upcomingIpos.length > 0 ? `
+      <h2>📅 청약 일정</h2>
       <ul>
         ${upcomingIpos.map(ipo => `
-          <li style="margin-bottom: 10px;">
-            <strong>${ipo.name}</strong><br/>
-            청약일: ${ipo.subStart?.toLocaleDateString()} ~ ${ipo.subEnd?.toLocaleDateString()}<br/>
-            공모가: ${ipo.offerPrice ? ipo.offerPrice.toLocaleString() + '원' : '미정'}<br/>
-            주간사: ${ipo.underwriter || '미정'}<br/>
-            기관경쟁률: ${ipo.competition || '미정'}
+          <li style="margin-bottom: 5px;">
+            <strong>${ipo.name}</strong> (${ipo.subStart?.toLocaleDateString()} ~ ${ipo.subEnd?.toLocaleDateString()})
           </li>
         `).join('')}
       </ul>
-      <p>상세 정보는 홈페이지를 확인하세요.</p>
+      ` : '<p>이번 주 청약 예정인 종목이 없습니다.</p>'}
+
+      ${upcomingListings.length > 0 ? `
+      <h2>🔔 상장 일정</h2>
+      <ul>
+        ${upcomingListings.map(ipo => `
+          <li style="margin-bottom: 5px;">
+            <strong>${ipo.name}</strong> (상장일: ${ipo.listDate?.toLocaleDateString()})
+          </li>
+        `).join('')}
+      </ul>
+      ` : ''}
+
+      <div style="margin-top: 20px; padding: 15px; background-color: #f9f9f9; text-align: center; border-radius: 8px;">
+        <p style="margin-bottom: 10px;">더 자세한 정보와 분석은 홈페이지에서 확인하세요!</p>
+        <a href="https://gongmoju-info-client.vercel.app/" style="display: inline-block; padding: 10px 20px; background-color: #000; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">
+          자세히 보기
+        </a>
+      </div>
     `;
 
     // Process in batches (Resend has rate limits)
