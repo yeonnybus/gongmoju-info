@@ -74,9 +74,11 @@ let CrawlerService = CrawlerService_1 = class CrawlerService {
             const rows = $('table[summary="공모주 청약일정"] tbody tr');
             for (let i = 0; i < rows.length; i++) {
                 const el = rows[i];
-                const nameRaw = $(el).find('td[height="30"]').text().trim();
+                const nameRawToken = $(el).find('td[height="30"]');
+                const nameRaw = nameRawToken.text().trim();
                 if (!nameRaw)
                     continue;
+                const linkHref = nameRawToken.find('a').attr('href');
                 const tds = $(el).find('td');
                 const scheduleRaw = $(tds[1]).text().trim();
                 const offerPriceRaw = $(tds[2]).text().trim();
@@ -87,6 +89,17 @@ let CrawlerService = CrawlerService_1 = class CrawlerService {
                 const [subStart, subEnd] = this.parseDateRange(scheduleRaw);
                 const offerPrice = this.parsePrice(offerPriceRaw);
                 const { bandLow, bandHigh } = this.parseBandPrice(bandPriceRaw);
+                let detailData = { lockupRate: null, circulatingSupply: null, otcPrice: null, competition: null, refundDate: null, listDate: null };
+                if (linkHref) {
+                    try {
+                        const detailUrl = `http://www.38.co.kr${linkHref}`;
+                        detailData = await this.fetchDetail(detailUrl);
+                    }
+                    catch (err) {
+                        this.logger.warn(`Failed to fetch detail for ${name}: ${err.message}`);
+                    }
+                }
+                const finalCompetition = (competitionRaw && competitionRaw !== '-') ? competitionRaw : (detailData.competition || competitionRaw);
                 if (!name)
                     continue;
                 try {
@@ -98,8 +111,13 @@ let CrawlerService = CrawlerService_1 = class CrawlerService {
                             offerPrice,
                             bandLow,
                             bandHigh,
-                            competition: competitionRaw,
+                            competition: finalCompetition,
                             underwriter,
+                            lockupRate: detailData.lockupRate,
+                            circulatingSupply: detailData.circulatingSupply,
+                            otcPrice: detailData.otcPrice,
+                            refundDate: detailData.refundDate,
+                            listDate: detailData.listDate,
                         },
                         create: {
                             name,
@@ -108,8 +126,13 @@ let CrawlerService = CrawlerService_1 = class CrawlerService {
                             offerPrice,
                             bandLow,
                             bandHigh,
-                            competition: competitionRaw,
+                            competition: finalCompetition,
                             underwriter,
+                            lockupRate: detailData.lockupRate,
+                            circulatingSupply: detailData.circulatingSupply,
+                            otcPrice: detailData.otcPrice,
+                            refundDate: detailData.refundDate,
+                            listDate: detailData.listDate,
                         },
                     });
                     count++;
@@ -117,6 +140,7 @@ let CrawlerService = CrawlerService_1 = class CrawlerService {
                 catch (e) {
                     this.logger.error(`Failed to upsert ${name}: ${e.message}`);
                 }
+                await new Promise(resolve => setTimeout(resolve, 200));
             }
             this.logger.log(`Crawled and processed ${count} items.`);
             return { count, message: 'Crawl successful' };
@@ -125,6 +149,138 @@ let CrawlerService = CrawlerService_1 = class CrawlerService {
             this.logger.error('Crawling failed', error);
             throw error;
         }
+    }
+    async fetchDetail(url) {
+        const response = await axios_1.default.get(url, {
+            responseType: 'arraybuffer',
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            },
+        });
+        const html = iconv_lite_1.default.decode(Buffer.from(response.data), 'EUC-KR');
+        const $ = cheerio.load(html);
+        let lockupRate = null;
+        $('td').each((i, el) => {
+            if ($(el).text().includes('의무보유확약')) {
+                const nextTd = $(el).next('td');
+                const val = nextTd.text().trim();
+                if (val && val !== '-') {
+                    lockupRate = val;
+                }
+            }
+        });
+        let competition = null;
+        $('td').each((i, el) => {
+            if ($(el).text().includes('기관경쟁률')) {
+                const nextTd = $(el).next('td');
+                const val = nextTd.text().trim();
+                if (val && val !== '-') {
+                    competition = val;
+                }
+            }
+        });
+        let refundDate = null;
+        let listDate = null;
+        $('td').each((i, el) => {
+            const txt = $(el).text().trim();
+            if (txt === '환불일') {
+                const nextTd = $(el).next('td');
+                const dateStr = nextTd.text().trim();
+                refundDate = this.parseSingleDate(dateStr);
+            }
+            if (txt === '상장일') {
+                const nextTd = $(el).next('td');
+                const dateStr = nextTd.text().trim();
+                listDate = this.parseSingleDate(dateStr);
+            }
+        });
+        let circulatingSupply = null;
+        let offerPriceNum = null;
+        $('td').each((i, el) => {
+            if ($(el).text().includes('확정공모가')) {
+                const nextTd = $(el).next('td');
+                const priceText = nextTd.text().replace(/[^\d]/g, '');
+                if (priceText) {
+                    offerPriceNum = parseInt(priceText, 10);
+                    return false;
+                }
+            }
+        });
+        const leafTables = $('table:not(:has(table))');
+        leafTables.each((i, table) => {
+            const text = $(table).text().replace(/\s+/g, ' ');
+            if (text.includes('주주명') && text.includes('지분율')) {
+                const rows = $(table).find('tr');
+                const totalRow = rows.filter((j, r) => {
+                    const rowText = $(r).text().trim();
+                    return rowText.includes('계') || rowText.includes('합계') || rowText.includes('소 계');
+                }).last();
+                if (totalRow.length > 0) {
+                    const tds = totalRow.find('td');
+                    for (let k = tds.length - 1; k >= 0; k--) {
+                        const txt = $(tds[k]).text().trim();
+                        if (txt.includes('%')) {
+                            if (k > 0) {
+                                const countVal = $(tds[k - 1]).text().trim().replace(/,/g, '');
+                                if (/^\d+$/.test(countVal) && offerPriceNum) {
+                                    const count = parseInt(countVal, 10);
+                                    const amountInOk = (count * offerPriceNum) / 100000000;
+                                    circulatingSupply = `${amountInOk.toFixed(0)}억 (${txt})`;
+                                }
+                                else if (/^\d+$/.test(countVal)) {
+                                    const countNum = parseInt(countVal, 10);
+                                    circulatingSupply = `${(countNum / 10000).toFixed(0)}만주 (${txt})`;
+                                }
+                                else {
+                                    circulatingSupply = txt;
+                                }
+                            }
+                            else {
+                                circulatingSupply = txt;
+                            }
+                            return false;
+                        }
+                    }
+                }
+            }
+        });
+        let otcPrice = null;
+        $('td').each((i, el) => {
+            const txt = $(el).text().trim();
+            if (txt === '삽니다 (가격참고)') {
+                const table = $(el).closest('table');
+                const rows = table.find('tr');
+                if (rows.length > 1) {
+                    rows.each((j, row) => {
+                        const tds = $(row).find('td');
+                        const firstText = $(tds[0]).text().trim();
+                        if (firstText.includes('삽니다') || firstText.includes('희망가격'))
+                            return;
+                        if (tds.length >= 2) {
+                            const priceRaw = $(tds[1]).text().trim();
+                            if (/^[\d,]+$/.test(priceRaw)) {
+                                otcPrice = priceRaw;
+                                return false;
+                            }
+                        }
+                    });
+                }
+                if (otcPrice)
+                    return false;
+            }
+        });
+        return { lockupRate, circulatingSupply, otcPrice, competition, refundDate, listDate };
+    }
+    parseSingleDate(raw) {
+        const cleaned = raw.trim();
+        const match = cleaned.match(/(\d{4})\.(\d{1,2})\.(\d{1,2})/);
+        if (match) {
+            const year = parseInt(match[1], 10);
+            const month = parseInt(match[2], 10) - 1;
+            const day = parseInt(match[3], 10);
+            return new Date(year, month, day);
+        }
+        return null;
     }
     parseDateRange(raw) {
         if (!raw.includes('~'))

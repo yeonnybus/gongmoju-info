@@ -2,37 +2,1754 @@
 > server@0.0.1 start:dev /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server
 > nest start --watch
 
-[2J[3J[H[[90m오후 4:40:29[0m] Starting compilation in watch mode...
+[2J[3J[H[[90m오후 5:38:30[0m] Starting compilation in watch mode...
 
-[[90m오후 4:40:31[0m] Found 0 errors. Watching for file changes.
+[[90m오후 5:38:32[0m] Found 0 errors. Watching for file changes.
 
-[32m[Nest] 16858  - [39m2025. 12. 20. 오후 4:40:32 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
-[32m[Nest] 16858  - [39m2025. 12. 20. 오후 4:40:32 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +9ms[39m
-[32m[Nest] 16858  - [39m2025. 12. 20. 오후 4:40:32 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
-[32m[Nest] 16858  - [39m2025. 12. 20. 오후 4:40:32 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
-[32m[Nest] 16858  - [39m2025. 12. 20. 오후 4:40:32 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +1ms[39m
-[32m[Nest] 16858  - [39m2025. 12. 20. 오후 4:40:32 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
-[32m[Nest] 16858  - [39m2025. 12. 20. 오후 4:40:32 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
-[32m[Nest] 16858  - [39m2025. 12. 20. 오후 4:40:32 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
-/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/src/runtime/core/engines/library/LibraryEngine.ts:440
-          throw new PrismaClientInitializationError(error.message, this.config.clientVersion!, error.error_code)
-                ^
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:32 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 28354  - [39m2025. 12. 20. 오후 5:38:33 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1044ms[39m
+[2J[3J[H[[90m오후 5:54:56[0m] File change detected. Starting incremental compilation...
 
+[[90m오후 5:54:57[0m] Found 0 errors. Watching for file changes.
 
-PrismaClientInitializationError: Can't reach database server at `localhost:5432`
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +320ms[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 30766  - [39m2025. 12. 20. 오후 5:54:59 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +982ms[39m
+[2J[3J[H[[90m오후 5:55:24[0m] File change detected. Starting incremental compilation...
 
-Please make sure your database server is running at `localhost:5432`.
-    at r (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.9.3__typescript@5.9.3/node_modules/@prisma/client/src/runtime/core/engines/library/LibraryEngine.ts:440:17)
-    at async Proxy.onModuleInit (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/prisma/prisma.service.ts:7:5)
-    at async Promise.all (index 0)
-    at async callModuleInitHook (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/hooks/on-module-init.hook.js:43:5)
-    at async NestApplication.callInitHook (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application-context.js:242:13)
-    at async NestApplication.init (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:103:9)
-    at async NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:175:13)
-    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:6:3) {
-  clientVersion: '6.19.1',
-  errorCode: 'P1001',
-  retryable: undefined
+[96msrc/crawler/crawler.service.ts[0m:[93m58[0m:[93m17[0m - [91merror[0m[90m TS2322: [0mType '{ lockupRate: string | null; circulatingSupply: string | null; otcPrice: string | null; }' is not assignable to type '{ lockupRate: null; circulatingSupply: null; otcPrice: null; }'.
+  Types of property 'lockupRate' are incompatible.
+    Type 'string | null' is not assignable to type 'null'.
+      Type 'string' is not assignable to type 'null'.
+
+[7m58[0m                 detailData = await this.fetchDetail(detailUrl);
+[7m  [0m [91m                ~~~~~~~~~~[0m
+
+[96msrc/crawler/crawler.service.ts[0m:[93m133[0m:[93m19[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'null'.
+
+[7m133[0m                   lockupRate = nextTd.text().trim();
+[7m   [0m [91m                  ~~~~~~~~~~[0m
+
+[96msrc/crawler/crawler.service.ts[0m:[93m184[0m:[93m24[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'null'.
+
+[7m184[0m                        circulatingSupply = txt;
+[7m   [0m [91m                       ~~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 5:55:24[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 5:55:34[0m] File change detected. Starting incremental compilation...
+
+[96msrc/crawler/crawler.service.ts[0m:[93m133[0m:[93m19[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'null'.
+
+[7m133[0m                   lockupRate = nextTd.text().trim();
+[7m   [0m [91m                  ~~~~~~~~~~[0m
+
+[96msrc/crawler/crawler.service.ts[0m:[93m184[0m:[93m24[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'null'.
+
+[7m184[0m                        circulatingSupply = txt;
+[7m   [0m [91m                       ~~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 5:55:34[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 5:55:43[0m] File change detected. Starting incremental compilation...
+
+[96msrc/crawler/crawler.service.ts[0m:[93m184[0m:[93m24[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'null'.
+
+[7m184[0m                        circulatingSupply = txt;
+[7m   [0m [91m                       ~~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 5:55:43[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 5:55:52[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 5:55:52[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +3ms[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:54 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1058ms[39m
+[31m[Nest] 30798  - [39m2025. 12. 20. 오후 5:55:54 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+ ELIFECYCLE  Command failed.
+. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 30763  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 30763  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 30763  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 30763  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 30763  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 30763  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30763  - [39m2025. 12. 20. 오후 5:54:58 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30763  - [39m2025. 12. 20. 오후 5:54:59 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1009ms[39m
+[31m[Nest] 30763  - [39m2025. 12. 20. 오후 5:54:59 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 5:55:24[0m] File change detected. Starting incremental compilation...
+
+[96msrc/crawler/crawler.service.ts[0m:[93m58[0m:[93m17[0m - [91merror[0m[90m TS2322: [0mType '{ lockupRate: string | null; circulatingSupply: string | null; otcPrice: string | null; }' is not assignable to type '{ lockupRate: null; circulatingSupply: null; otcPrice: null; }'.
+  Types of property 'lockupRate' are incompatible.
+    Type 'string | null' is not assignable to type 'null'.
+      Type 'string' is not assignable to type 'null'.
+
+[7m58[0m                 detailData = await this.fetchDetail(detailUrl);
+[7m  [0m [91m                ~~~~~~~~~~[0m
+
+[96msrc/crawler/crawler.service.ts[0m:[93m133[0m:[93m19[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'null'.
+
+[7m133[0m                   lockupRate = nextTd.text().trim();
+[7m   [0m [91m                  ~~~~~~~~~~[0m
+
+[96msrc/crawler/crawler.service.ts[0m:[93m184[0m:[93m24[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'null'.
+
+[7m184[0m                        circulatingSupply = txt;
+[7m   [0m [91m                       ~~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 5:55:24[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 5:55:34[0m] File change detected. Starting incremental compilation...
+
+[96msrc/crawler/crawler.service.ts[0m:[93m133[0m:[93m19[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'null'.
+
+[7m133[0m                   lockupRate = nextTd.text().trim();
+[7m   [0m [91m                  ~~~~~~~~~~[0m
+
+[96msrc/crawler/crawler.service.ts[0m:[93m184[0m:[93m24[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'null'.
+
+[7m184[0m                        circulatingSupply = txt;
+[7m   [0m [91m                       ~~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 5:55:34[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 5:55:43[0m] File change detected. Starting incremental compilation...
+
+[96msrc/crawler/crawler.service.ts[0m:[93m184[0m:[93m24[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'null'.
+
+[7m184[0m                        circulatingSupply = txt;
+[7m   [0m [91m                       ~~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 5:55:43[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 5:55:52[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 5:55:52[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +3ms[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30801  - [39m2025. 12. 20. 오후 5:55:54 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1031ms[39m
+ ELIFECYCLE  Command failed.
+ssignable to type 'null'.
+
+[7m184[0m                        circulatingSupply = txt;
+[7m   [0m [91m                       ~~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 5:55:34[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 5:55:43[0m] File change detected. Starting incremental compilation...
+
+[96msrc/crawler/crawler.service.ts[0m:[93m184[0m:[93m24[0m - [91merror[0m[90m TS2322: [0mType 'string' is not assignable to type 'null'.
+
+[7m184[0m                        circulatingSupply = txt;
+[7m   [0m [91m                       ~~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 5:55:43[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 5:55:52[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 5:55:52[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +3ms[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:54 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1058ms[39m
+[31m[Nest] 30799  - [39m2025. 12. 20. 오후 5:55:54 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+ ELIFECYCLE  Command failed.
+[39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 30800  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30800  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 30800  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 30800  - [39m2025. 12. 20. 오후 5:55:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 30800  - [39m2025. 12. 20. 오후 5:55:54 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1039ms[39m
+[31m[Nest] 30800  - [39m2025. 12. 20. 오후 5:55:54 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +3ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 5:58:30[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 5:58:30[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:31 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:32 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +999ms[39m
+[31m[Nest] 32529  - [39m2025. 12. 20. 오후 5:58:32 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 5:58:53[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 5:58:54[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 5:58:54[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 5:58:54[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +3ms[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:57 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 32711  - [39m2025. 12. 20. 오후 5:58:58 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +979ms[39m
+[2J[3J[H[[90m오후 5:59:32[0m] File change detected. Starting incremental compilation...
+
+[96mdebug_selector.ts[0m:[93m25[0m:[93m47[0m - [91merror[0m[90m TS2304: [0mCannot find name 'totalRow'.
+
+[7m25[0m     console.log('Total/Subtotal rows found:', totalRow.length);
+[7m  [0m [91m                                              ~~~~~~~~[0m
+
+[96mdebug_selector.ts[0m:[93m27[0m:[93m19[0m - [91merror[0m[90m TS2304: [0mCannot find name 'totalRow'.
+
+[7m27[0m     const count = totalRow.length;
+[7m  [0m [91m                  ~~~~~~~~[0m
+
+[96mdebug_selector.ts[0m:[93m28[0m:[93m5[0m - [91merror[0m[90m TS2304: [0mCannot find name 'totalRow'.
+
+[7m28[0m     totalRow.each((i, el) => {
+[7m  [0m [91m    ~~~~~~~~[0m
+
+[[90m오후 5:59:33[0m] Found 3 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 5:59:40[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 5:59:41[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:41 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:42 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1015ms[39m
+[31m[Nest] 33025  - [39m2025. 12. 20. 오후 5:59:42 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:00:11[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:00:12[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +9ms[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:12 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:13 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1018ms[39m
+[31m[Nest] 33313  - [39m2025. 12. 20. 오후 6:00:13 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:00:52[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:00:52[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +13ms[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:53 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 33623  - [39m2025. 12. 20. 오후 6:00:54 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1026ms[39m
+[2J[3J[H[[90m오후 6:03:30[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:03:31[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:32 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:33 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1007ms[39m
+[31m[Nest] 35591  - [39m2025. 12. 20. 오후 6:03:33 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:05:53[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:05:53[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +12ms[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:54 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:55 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1059ms[39m
+[31m[Nest] 35695  - [39m2025. 12. 20. 오후 6:05:55 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:06:47[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:06:47[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:48 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:49 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1085ms[39m
+[31m[Nest] 35893  - [39m2025. 12. 20. 오후 6:06:49 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:08:22[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:08:22[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +9ms[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:23 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:24 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1013ms[39m
+[31m[Nest] 36445  - [39m2025. 12. 20. 오후 6:08:24 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:08:34[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:08:35[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +11ms[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:35 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 36472  - [39m2025. 12. 20. 오후 6:08:36 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +981ms[39m
+[2J[3J[H[[90m오후 6:10:22[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:10:23[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +12ms[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:23 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:24 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1001ms[39m
+[31m[Nest] 37288  - [39m2025. 12. 20. 오후 6:10:24 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:12:15[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:12:15[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +20ms[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +3ms[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:16 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:17 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1015ms[39m
+[31m[Nest] 38442  - [39m2025. 12. 20. 오후 6:12:17 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:12:27[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:12:27[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:28 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:29 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +305ms[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:29 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:29 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:29 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:29 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:29 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +5ms[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:29 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:29 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:29 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:29 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:29 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:30 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +998ms[39m
+[31m[Nest] 38752  - [39m2025. 12. 20. 오후 6:12:30 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:14:05[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:14:06[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +8ms[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:07 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:08 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1191ms[39m
+[31m[Nest] 39917  - [39m2025. 12. 20. 오후 6:14:08 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:15:52[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:15:53[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +17ms[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:54 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:55 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +998ms[39m
+[31m[Nest] 41529  - [39m2025. 12. 20. 오후 6:15:55 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +4ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:17:18[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:17:19[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +12ms[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:20 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:21 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1211ms[39m
+[31m[Nest] 42216  - [39m2025. 12. 20. 오후 6:17:21 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +4ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:21:59[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:22:01[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +12ms[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:02 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 42498  - [39m2025. 12. 20. 오후 6:22:03 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1052ms[39m
+[2J[3J[H[[90m오후 6:24:00[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:24:01[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +33ms[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +5ms[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +6ms[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:02 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 43002  - [39m2025. 12. 20. 오후 6:24:03 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1063ms[39m
+[2J[3J[H[[90m오후 6:24:29[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:24:30[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +10ms[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:31 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:32 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1122ms[39m
+[31m[Nest] 43071  - [39m2025. 12. 20. 오후 6:24:32 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 6:26:16[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 6:26:17[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +17ms[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +6ms[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +3ms[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:19 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:20 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +991ms[39m
+[31m[Nest] 43850  - [39m2025. 12. 20. 오후 6:26:20 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 3:37:59[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 3:38:00[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +9ms[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +4ms[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:01 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:02 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +975ms[39m
+[31m[Nest] 68164  - [39m2025. 12. 21. 오후 3:38:02 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 3:50:02[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 3:50:03[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +18ms[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:04 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:05 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1023ms[39m
+[31m[Nest] 68947  - [39m2025. 12. 21. 오후 3:50:05 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 3:50:24[0m] File change detected. Starting incremental compilation...
+
+[96msrc/mail/mail.service.ts[0m:[93m26[0m:[93m68[0m - [91merror[0m[90m TS2339: [0mProperty 'id' does not exist on type 'CreateEmailResponse'.
+  Property 'id' does not exist on type '{ error: ErrorResponse; data: null; } & { headers: Record<string, string> | null; }'.
+
+[7m26[0m       this.logger.log(`Verification email sent to ${email}: ${data.id}`);
+[7m  [0m [91m                                                                   ~~[0m
+
+[[90m오후 3:50:25[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:50:25[0m] File change detected. Starting incremental compilation...
+
+[96msrc/mail/mail.service.ts[0m:[93m26[0m:[93m68[0m - [91merror[0m[90m TS2339: [0mProperty 'id' does not exist on type 'CreateEmailResponse'.
+  Property 'id' does not exist on type '{ error: ErrorResponse; data: null; } & { headers: Record<string, string> | null; }'.
+
+[7m26[0m       this.logger.log(`Verification email sent to ${email}: ${data.id}`);
+[7m  [0m [91m                                                                   ~~[0m
+
+[[90m오후 3:50:26[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:50:27[0m] File change detected. Starting incremental compilation...
+
+[96msrc/app.module.ts[0m:[93m9[0m:[93m42[0m - [91merror[0m[90m TS2552: [0mCannot find name 'IpoModule'. Did you mean 'Module'?
+
+[7m9[0m   imports: [CrawlerModule, PrismaModule, IpoModule, MailModule],
+[7m [0m [91m                                         ~~~~~~~~~[0m
+
+[96msrc/mail/mail.service.ts[0m:[93m26[0m:[93m68[0m - [91merror[0m[90m TS2339: [0mProperty 'id' does not exist on type 'CreateEmailResponse'.
+  Property 'id' does not exist on type '{ error: ErrorResponse; data: null; } & { headers: Record<string, string> | null; }'.
+
+[7m26[0m       this.logger.log(`Verification email sent to ${email}: ${data.id}`);
+[7m  [0m [91m                                                                   ~~[0m
+
+[[90m오후 3:50:27[0m] Found 2 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:50:38[0m] File change detected. Starting incremental compilation...
+
+[96msrc/mail/mail.service.ts[0m:[93m26[0m:[93m68[0m - [91merror[0m[90m TS2339: [0mProperty 'id' does not exist on type 'CreateEmailResponse'.
+  Property 'id' does not exist on type '{ error: ErrorResponse; data: null; } & { headers: Record<string, string> | null; }'.
+
+[7m26[0m       this.logger.log(`Verification email sent to ${email}: ${data.id}`);
+[7m  [0m [91m                                                                   ~~[0m
+
+[[90m오후 3:50:39[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:50:40[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 3:50:40[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:50:41[0m] File change detected. Starting incremental compilation...
+
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +14ms[39m
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMailModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +37ms[39m
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m26[0m:[93m17[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'verificationCode' does not exist in type '(Without<SubscriberUpdateInput, SubscriberUncheckedUpdateInput> & SubscriberUncheckedUpdateInput) | (Without<...> & SubscriberUpdateInput)'.
+
+[7m26[0m       update: { verificationCode },
+[7m  [0m [91m                ~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.9.3__typescript@5.9.3/node_modules/.prisma/client/index.d.ts[0m:[93m3119[0m:[93m5[0m
+    [7m3119[0m     update: XOR<SubscriberUpdateInput, SubscriberUncheckedUpdateInput>
+    [7m    [0m [96m    ~~~~~~[0m
+    The expected type comes from property 'update' which is declared here on type '{ select?: SubscriberSelect<DefaultArgs> | null | undefined; omit?: SubscriberOmit<DefaultArgs> | null | undefined; where: SubscriberWhereUniqueInput; create: (Without<...> & SubscriberUncheckedCreateInput) | (Without<...> & SubscriberCreateInput); update: (Without<...> & SubscriberUncheckedUpdateInput) | (Without<....'
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m27[0m:[93m24[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'verificationCode' does not exist in type '(Without<SubscriberCreateInput, SubscriberUncheckedCreateInput> & SubscriberUncheckedCreateInput) | (Without<...> & SubscriberCreateInput)'.
+
+[7m27[0m       create: { email, verificationCode, isActive: true },
+[7m  [0m [91m                       ~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.9.3__typescript@5.9.3/node_modules/.prisma/client/index.d.ts[0m:[93m3115[0m:[93m5[0m
+    [7m3115[0m     create: XOR<SubscriberCreateInput, SubscriberUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~~~[0m
+    The expected type comes from property 'create' which is declared here on type '{ select?: SubscriberSelect<DefaultArgs> | null | undefined; omit?: SubscriberOmit<DefaultArgs> | null | undefined; where: SubscriberWhereUniqueInput; create: (Without<...> & SubscriberUncheckedCreateInput) | (Without<...> & SubscriberCreateInput); update: (Without<...> & SubscriberUncheckedUpdateInput) | (Without<....'
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m42[0m:[93m35[0m - [91merror[0m[90m TS2339: [0mProperty 'verificationCode' does not exist on type '{ email: string; id: string; isActive: boolean; createdAt: Date; }'.
+
+[7m42[0m     if (!subscriber || subscriber.verificationCode !== code) {
+[7m  [0m [91m                                  ~~~~~~~~~~~~~~~~[0m
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m49[0m:[93m15[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'isVerified' does not exist in type '(Without<SubscriberUpdateInput, SubscriberUncheckedUpdateInput> & SubscriberUncheckedUpdateInput) | (Without<...> & SubscriberUpdateInput)'.
+
+[7m49[0m       data: { isVerified: true, verificationCode: null },
+[7m  [0m [91m              ~~~~~~~~~~[0m
+
+  [96mnode_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.9.3__typescript@5.9.3/node_modules/.prisma/client/index.d.ts[0m:[93m3045[0m:[93m5[0m
+    [7m3045[0m     data: XOR<SubscriberUpdateInput, SubscriberUncheckedUpdateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: SubscriberSelect<DefaultArgs> | null | undefined; omit?: SubscriberOmit<DefaultArgs> | null | undefined; data: (Without<...> & SubscriberUncheckedUpdateInput) | (Without<...> & SubscriberUpdateInput); where: SubscriberWhereUniqueInput; }'
+
+[[90m오후 3:50:43[0m] Found 4 errors. Watching for file changes.
+
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +22ms[39m
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +6ms[39m
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[2J[3J[H[[90m오후 3:50:43[0m] File change detected. Starting incremental compilation...
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m26[0m:[93m17[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'verificationCode' does not exist in type '(Without<SubscriberUpdateInput, SubscriberUncheckedUpdateInput> & SubscriberUncheckedUpdateInput) | (Without<...> & SubscriberUpdateInput)'.
+
+[7m26[0m       update: { verificationCode },
+[7m  [0m [91m                ~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.9.3__typescript@5.9.3/node_modules/.prisma/client/index.d.ts[0m:[93m3119[0m:[93m5[0m
+    [7m3119[0m     update: XOR<SubscriberUpdateInput, SubscriberUncheckedUpdateInput>
+    [7m    [0m [96m    ~~~~~~[0m
+    The expected type comes from property 'update' which is declared here on type '{ select?: SubscriberSelect<DefaultArgs> | null | undefined; omit?: SubscriberOmit<DefaultArgs> | null | undefined; where: SubscriberWhereUniqueInput; create: (Without<...> & SubscriberUncheckedCreateInput) | (Without<...> & SubscriberCreateInput); update: (Without<...> & SubscriberUncheckedUpdateInput) | (Without<....'
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m27[0m:[93m24[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'verificationCode' does not exist in type '(Without<SubscriberCreateInput, SubscriberUncheckedCreateInput> & SubscriberUncheckedCreateInput) | (Without<...> & SubscriberCreateInput)'.
+
+[7m27[0m       create: { email, verificationCode, isActive: true },
+[7m  [0m [91m                       ~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.9.3__typescript@5.9.3/node_modules/.prisma/client/index.d.ts[0m:[93m3115[0m:[93m5[0m
+    [7m3115[0m     create: XOR<SubscriberCreateInput, SubscriberUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~~~[0m
+    The expected type comes from property 'create' which is declared here on type '{ select?: SubscriberSelect<DefaultArgs> | null | undefined; omit?: SubscriberOmit<DefaultArgs> | null | undefined; where: SubscriberWhereUniqueInput; create: (Without<...> & SubscriberUncheckedCreateInput) | (Without<...> & SubscriberCreateInput); update: (Without<...> & SubscriberUncheckedUpdateInput) | (Without<....'
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m42[0m:[93m35[0m - [91merror[0m[90m TS2339: [0mProperty 'verificationCode' does not exist on type '{ email: string; id: string; isActive: boolean; createdAt: Date; }'.
+
+[7m42[0m     if (!subscriber || subscriber.verificationCode !== code) {
+[7m  [0m [91m                                  ~~~~~~~~~~~~~~~~[0m
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m49[0m:[93m15[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'isVerified' does not exist in type '(Without<SubscriberUpdateInput, SubscriberUncheckedUpdateInput> & SubscriberUncheckedUpdateInput) | (Without<...> & SubscriberUpdateInput)'.
+
+[7m49[0m       data: { isVerified: true, verificationCode: null },
+[7m  [0m [91m              ~~~~~~~~~~[0m
+
+  [96mnode_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.9.3__typescript@5.9.3/node_modules/.prisma/client/index.d.ts[0m:[93m3045[0m:[93m5[0m
+    [7m3045[0m     data: XOR<SubscriberUpdateInput, SubscriberUncheckedUpdateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: SubscriberSelect<DefaultArgs> | null | undefined; omit?: SubscriberOmit<DefaultArgs> | null | undefined; data: (Without<...> & SubscriberUncheckedUpdateInput) | (Without<...> & SubscriberUpdateInput); where: SubscriberWhereUniqueInput; }'
+
+[[90m오후 3:50:44[0m] Found 4 errors. Watching for file changes.
+
+[32m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:44 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1033ms[39m
+[31m[Nest] 69242  - [39m2025. 12. 21. 오후 3:50:44 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 3:50:48[0m] File change detected. Starting incremental compilation...
+
+[96msrc/app.module.ts[0m:[93m10[0m:[93m28[0m - [91merror[0m[90m TS2304: [0mCannot find name 'PrismaModule'.
+
+[7m10[0m   imports: [CrawlerModule, PrismaModule, IpoModule, MailModule, SubscriberModule],
+[7m  [0m [91m                           ~~~~~~~~~~~~[0m
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m26[0m:[93m17[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'verificationCode' does not exist in type '(Without<SubscriberUpdateInput, SubscriberUncheckedUpdateInput> & SubscriberUncheckedUpdateInput) | (Without<...> & SubscriberUpdateInput)'.
+
+[7m26[0m       update: { verificationCode },
+[7m  [0m [91m                ~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.9.3__typescript@5.9.3/node_modules/.prisma/client/index.d.ts[0m:[93m3119[0m:[93m5[0m
+    [7m3119[0m     update: XOR<SubscriberUpdateInput, SubscriberUncheckedUpdateInput>
+    [7m    [0m [96m    ~~~~~~[0m
+    The expected type comes from property 'update' which is declared here on type '{ select?: SubscriberSelect<DefaultArgs> | null | undefined; omit?: SubscriberOmit<DefaultArgs> | null | undefined; where: SubscriberWhereUniqueInput; create: (Without<...> & SubscriberUncheckedCreateInput) | (Without<...> & SubscriberCreateInput); update: (Without<...> & SubscriberUncheckedUpdateInput) | (Without<....'
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m27[0m:[93m24[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'verificationCode' does not exist in type '(Without<SubscriberCreateInput, SubscriberUncheckedCreateInput> & SubscriberUncheckedCreateInput) | (Without<...> & SubscriberCreateInput)'.
+
+[7m27[0m       create: { email, verificationCode, isActive: true },
+[7m  [0m [91m                       ~~~~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.9.3__typescript@5.9.3/node_modules/.prisma/client/index.d.ts[0m:[93m3115[0m:[93m5[0m
+    [7m3115[0m     create: XOR<SubscriberCreateInput, SubscriberUncheckedCreateInput>
+    [7m    [0m [96m    ~~~~~~[0m
+    The expected type comes from property 'create' which is declared here on type '{ select?: SubscriberSelect<DefaultArgs> | null | undefined; omit?: SubscriberOmit<DefaultArgs> | null | undefined; where: SubscriberWhereUniqueInput; create: (Without<...> & SubscriberUncheckedCreateInput) | (Without<...> & SubscriberCreateInput); update: (Without<...> & SubscriberUncheckedUpdateInput) | (Without<....'
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m42[0m:[93m35[0m - [91merror[0m[90m TS2339: [0mProperty 'verificationCode' does not exist on type '{ email: string; id: string; isActive: boolean; createdAt: Date; }'.
+
+[7m42[0m     if (!subscriber || subscriber.verificationCode !== code) {
+[7m  [0m [91m                                  ~~~~~~~~~~~~~~~~[0m
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m49[0m:[93m15[0m - [91merror[0m[90m TS2353: [0mObject literal may only specify known properties, and 'isVerified' does not exist in type '(Without<SubscriberUpdateInput, SubscriberUncheckedUpdateInput> & SubscriberUncheckedUpdateInput) | (Without<...> & SubscriberUpdateInput)'.
+
+[7m49[0m       data: { isVerified: true, verificationCode: null },
+[7m  [0m [91m              ~~~~~~~~~~[0m
+
+  [96mnode_modules/.pnpm/@prisma+client@6.19.1_prisma@6.19.1_typescript@5.9.3__typescript@5.9.3/node_modules/.prisma/client/index.d.ts[0m:[93m3045[0m:[93m5[0m
+    [7m3045[0m     data: XOR<SubscriberUpdateInput, SubscriberUncheckedUpdateInput>
+    [7m    [0m [96m    ~~~~[0m
+    The expected type comes from property 'data' which is declared here on type '{ select?: SubscriberSelect<DefaultArgs> | null | undefined; omit?: SubscriberOmit<DefaultArgs> | null | undefined; data: (Without<...> & SubscriberUncheckedUpdateInput) | (Without<...> & SubscriberUpdateInput); where: SubscriberWhereUniqueInput; }'
+
+[[90m오후 3:50:49[0m] Found 5 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:51:04[0m] File change detected. Starting incremental compilation...
+
+[96msrc/app.module.ts[0m:[93m17[0m:[93m1[0m - [91merror[0m[90m TS1160: [0mUnterminated template literal.
+
+[7m17[0m 
+[7m  [0m [91m[0m
+
+[[90m오후 3:51:05[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:51:42[0m] File change detected. Starting incremental compilation...
+
+[96msrc/app.module.ts[0m:[93m17[0m:[93m1[0m - [91merror[0m[90m TS1160: [0mUnterminated template literal.
+
+[7m17[0m 
+[7m  [0m [91m[0m
+
+[[90m오후 3:51:43[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:52:01[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 3:52:02[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:52:04[0m] File change detected. Starting incremental compilation...
+
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:05 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +410ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMailModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +8ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSubscriberModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +16ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +11ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +6ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +12ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +11ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSubscriberController {/subscribers}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 69582  - [39m2025. 12. 21. 오후 3:52:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/verify, POST} route[39m[38;5;3m +0ms[39m
+[[90m오후 3:52:06[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:52:06[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 3:52:07[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:52:07[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 3:52:08[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:52:08[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 3:52:09[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +42ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMailModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSchedulerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScheduleModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSubscriberModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +6ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSubscriberController {/subscribers}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:10 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/verify, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:12 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1136ms[39m
+[31m[Nest] 69668  - [39m2025. 12. 21. 오후 3:52:12 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 3:55:31[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 3:55:31[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +16ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMailModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSchedulerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScheduleModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSubscriberModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSubscriberController {/subscribers}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:33 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/verify, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:34 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1000ms[39m
+[31m[Nest] 69886  - [39m2025. 12. 21. 오후 3:55:34 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +21ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 3:55:39[0m] File change detected. Starting incremental compilation...
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m12[0m:[93m40[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SchedulerService'.
+
+[7m12[0m     private readonly schedulerService: SchedulerService,
+[7m  [0m [91m                                       ~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 3:55:39[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:55:40[0m] File change detected. Starting incremental compilation...
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m12[0m:[93m40[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SchedulerService'.
+
+[7m12[0m     private readonly schedulerService: SchedulerService,
+[7m  [0m [91m                                       ~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 3:55:41[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:55:42[0m] File change detected. Starting incremental compilation...
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m12[0m:[93m40[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SchedulerService'.
+
+[7m12[0m     private readonly schedulerService: SchedulerService,
+[7m  [0m [91m                                       ~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 3:55:43[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:55:55[0m] File change detected. Starting incremental compilation...
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m12[0m:[93m40[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SchedulerService'.
+
+[7m12[0m     private readonly schedulerService: SchedulerService,
+[7m  [0m [91m                                       ~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 3:55:55[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:57:52[0m] File change detected. Starting incremental compilation...
+
+[96msrc/subscriber/subscriber.controller.ts[0m:[93m12[0m:[93m40[0m - [91merror[0m[90m TS2304: [0mCannot find name 'SchedulerService'.
+
+[7m12[0m     private readonly schedulerService: SchedulerService,
+[7m  [0m [91m                                       ~~~~~~~~~~~~~~~~[0m
+
+[[90m오후 3:57:53[0m] Found 1 error. Watching for file changes.
+
+[2J[3J[H[[90m오후 3:58:08[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 3:58:09[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +30ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMailModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSchedulerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScheduleModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSubscriberModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +18ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +5ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSubscriberController {/subscribers}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/verify, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:11 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/test-report, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:12 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1090ms[39m
+[31m[Nest] 70144  - [39m2025. 12. 21. 오후 3:58:12 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 4:10:21[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 4:10:23[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 71037  - [39m2025. 12. 21. 오후 4:10:24 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[31m[Nest] 71037  - [39m2025. 12. 21. 오후 4:10:24 [31m  ERROR[39m [38;5;3m[ExceptionHandler] [39mError: Missing API key. Pass it to the constructor `new Resend("re_123")`
+    at new Resend [90m(/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/[39mnode_modules/[4m.pnpm[24m/resend@6.6.0/node_modules/[4mresend[24m/dist/index.cjs:786:25[90m)[39m
+    at new MailService [90m(/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/[39msrc/mail/mail.service.ts:10:19[90m)[39m
+    at Injector.instantiateClass [90m(/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/[39mnode_modules/[4m.pnpm[24m/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/[4m@nestjs[24m/core/injector/injector.js:418:19[90m)[39m
+    at callback [90m(/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/[39mnode_modules/[4m.pnpm[24m/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/[4m@nestjs[24m/core/injector/injector.js:70:45[90m)[39m
+    at async Injector.resolveConstructorParams [90m(/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/[39mnode_modules/[4m.pnpm[24m/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/[4m@nestjs[24m/core/injector/injector.js:170:24[90m)[39m
+    at async Injector.loadInstance [90m(/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/[39mnode_modules/[4m.pnpm[24m/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/[4m@nestjs[24m/core/injector/injector.js:75:13[90m)[39m
+    at async Injector.loadProvider [90m(/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/[39mnode_modules/[4m.pnpm[24m/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/[4m@nestjs[24m/core/injector/injector.js:103:9[90m)[39m
+    at async [90m/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/[39mnode_modules/[4m.pnpm[24m/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/[4m@nestjs[24m/core/injector/instance-loader.js:56:13
+    at async Promise.all (index 3)
+    at async InstanceLoader.createInstancesOfProviders [90m(/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/[39mnode_modules/[4m.pnpm[24m/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/[4m@nestjs[24m/core/injector/instance-loader.js:55:9[90m)[39m
+[2J[3J[H[[90m오후 4:16:41[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 4:16:42[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +24ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMailModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSchedulerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScheduleModule dependencies initialized[39m[38;5;3m +2ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSubscriberModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +2ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSubscriberController {/subscribers}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/verify, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:43 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/test-report, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 71651  - [39m2025. 12. 21. 오후 4:16:44 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +992ms[39m
+[2J[3J[H[[90m오후 4:28:56[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 4:28:58[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 4:29:04[0m] File change detected. Starting incremental compilation...
+
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:05 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +308ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMailModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +113ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSchedulerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScheduleModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSubscriberModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +20ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSubscriberController {/subscribers}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/verify, POST} route[39m[38;5;3m +163ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:06 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/test-report, POST} route[39m[38;5;3m +192ms[39m
+[32m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:07 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1344ms[39m
+[31m[Nest] 73325  - [39m2025. 12. 21. 오후 4:29:07 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +10ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[[90m오후 4:29:08[0m] Found 0 errors. Watching for file changes.
+
+[2J[3J[H[[90m오후 4:29:09[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 4:29:11[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:14 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:14 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +168ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:14 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMailModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:14 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:14 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSchedulerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:14 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:14 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScheduleModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:14 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSubscriberModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:14 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:14 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:15 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +51ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:15 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:15 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:15 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:15 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:15 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:15 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +3ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:15 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSubscriberController {/subscribers}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:15 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:15 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/verify, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:15 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/test-report, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:16 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1364ms[39m
+[31m[Nest] 73422  - [39m2025. 12. 21. 오후 4:29:16 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 4:33:48[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 4:33:49[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +51ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMailModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +3ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSchedulerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScheduleModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSubscriberModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +1ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +5ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +2ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSubscriberController {/subscribers}:[39m[38;5;3m +1ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/verify, POST} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:51 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/test-report, POST} route[39m[38;5;3m +4ms[39m
+[32m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:52 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +997ms[39m
+[31m[Nest] 75505  - [39m2025. 12. 21. 오후 4:33:52 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +1ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+
+Node.js v20.18.1
+[2J[3J[H[[90m오후 4:36:36[0m] File change detected. Starting incremental compilation...
+
+[[90m오후 4:36:37[0m] Found 0 errors. Watching for file changes.
+
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[NestFactory] [39m[32mStarting Nest application...[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mPrismaModule dependencies initialized[39m[38;5;3m +33ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mMailModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mDiscoveryModule dependencies initialized[39m[38;5;3m +5ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSchedulerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mAppModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mScheduleModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mSubscriberModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mCrawlerModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[InstanceLoader] [39m[32mIpoModule dependencies initialized[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mAppController {/}:[39m[38;5;3m +4ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mCrawlerController {/crawler}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/crawler/test, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mIpoController {/ipo}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo, GET} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/ipo/:id, GET} route[39m[38;5;3m +1ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[RoutesResolver] [39m[32mSubscriberController {/subscribers}:[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/verify, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:39 [32m    LOG[39m [38;5;3m[RouterExplorer] [39m[32mMapped {/subscribers/test-report, POST} route[39m[38;5;3m +0ms[39m
+[32m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:40 [32m    LOG[39m [38;5;3m[NestApplication] [39m[32mNest application successfully started[39m[38;5;3m +1015ms[39m
+[31m[Nest] 77338  - [39m2025. 12. 21. 오후 4:36:40 [31m  ERROR[39m [38;5;3m[NestApplication] [39m[31mError: listen EADDRINUSE: address already in use :::3000[39m[38;5;3m +2ms[39m
+node:net:1908
+    const ex = new UVExceptionWithHostPort(err, 'listen', address, port);
+               ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (node:net:1908:16)
+    at listenInCluster (node:net:1965:12)
+    at Server.listen (node:net:2067:7)
+    at ExpressAdapter.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+platform-express@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+core@11.1.9/node_modules/@nestjs/platform-express/adapters/express-adapter.js:127:32)
+    at /Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:188:30
+    at new Promise (<anonymous>)
+    at NestApplication.listen (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/node_modules/.pnpm/@nestjs+core@11.1.9_@nestjs+common@11.1.9_reflect-metadata@0.2.2_rxjs@7.8.2__@nestjs+pl_e6e9c70d351bb0b87e2f9c662f5e6e83/node_modules/@nestjs/core/nest-application.js:178:16)
+    at async bootstrap (/Users/macpro/.gemini/antigravity/scratch/gongmoju-info/server/src/main.ts:7:3) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
 }
 
 Node.js v20.18.1

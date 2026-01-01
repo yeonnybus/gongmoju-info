@@ -47,4 +47,6 @@ model Subscriber {
   createdAt          DateTime @default(now())
   isVerified         Boolean  @default(false)
   verificationCode   String?
+  codeExpiresAt      DateTime?
+  unsubscribeToken   String?  @unique
 }

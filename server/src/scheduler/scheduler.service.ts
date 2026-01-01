@@ -64,9 +64,22 @@ export class SchedulerService {
     `;
 
     // Process in batches (Resend has rate limits)
+    const apiUrl = process.env.API_URL || 'http://localhost:3000';
+    
     for (const sub of subscribers) {
         try {
-            await this.mailService.sendWeeklyReport(sub.email, reportHtml);
+            // Append Unsubscribe Link to the report
+            const unsubscribeLink = `${apiUrl}/subscribers/unsubscribe?token=${sub.unsubscribeToken}`;
+            const personalizedReport = `
+              ${reportHtml}
+              <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;" />
+              <div style="text-align: center; font-size: 12px; color: #888;">
+                <p>본 메일은 주간 리포트 구독 신청에 의해 발송되었습니다.</p>
+                <a href="${unsubscribeLink}" style="color: #888; text-decoration: underline;">수신 거부 (Unsubscribe)</a>
+              </div>
+            `;
+
+            await this.mailService.sendWeeklyReport(sub.email, personalizedReport);
             // Small delay to be polite
             await new Promise(r => setTimeout(r, 100)); 
         } catch (e) {

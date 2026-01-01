@@ -18,6 +18,9 @@ let CrawlerController = class CrawlerController {
         this.crawlerService = crawlerService;
     }
     async triggerCrawl() {
+        if (process.env.NODE_ENV === 'production') {
+            throw new common_1.ForbiddenException('This endpoint is not available in production');
+        }
         return this.crawlerService.scrapeIpoList();
     }
 };
