@@ -14,6 +14,7 @@ export interface ScoreResult {
     description: string;
     colorClass: string; // Tailwind text color class
     bgClass: string; // Tailwind bg color class for badge/card
+    isDataMissing?: boolean;
     details: {
         competitionScore: number;
         lockupScore: number;
@@ -29,6 +30,29 @@ export function calculateIpoScore(ipo: IpoData): ScoreResult {
     let supplyScore = 0;
     let otcScore = 0;
     let listingScore = 0; // 동시상장 여부 (데이터 없음)
+    
+    // Check for missing key data
+    const isCompetitionMissing = !ipo.competition || ipo.competition === '-' || ipo.competition.trim() === '';
+    const isLockupMissing = !ipo.lockupRate || ipo.lockupRate === '-' || ipo.lockupRate.trim() === '';
+
+    // If key data is missing, return "Analysis Pending" state
+    if (isCompetitionMissing || isLockupMissing) {
+        return {
+            totalScore: 0,
+            grade: '분석 대기중',
+            description: '아직 기관경쟁률 또는 의무보유확약 정보가 없습니다.',
+            colorClass: 'text-gray-500',
+            bgClass: 'bg-gray-100 dark:bg-gray-800',
+            isDataMissing: true,
+            details: {
+                competitionScore: 0,
+                lockupScore: 0,
+                supplyScore: 0,
+                otcScore: 0,
+                listingScore: 0
+            }
+        };
+    }
 
     // 1. 기관경쟁률 (Institution Competition Rate)
     // ~300: 0, 300~350: 1, 350~400: 2, 400~450: 3, 450~500: 4, 500~: 5
