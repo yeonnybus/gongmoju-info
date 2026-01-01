@@ -45,7 +45,7 @@ export function EmailSubscription() {
     try {
       await verifySubscriber(email, verifyCode);
       setIsDialogOpen(false);
-      toast.success("구독이 완료되었습니다! 내일부터 리포트가 발송됩니다.", {
+      toast.success("구독이 완료되었습니다! 다음주부터 리포트가 발송됩니다.", {
           icon: <CheckCircle className="text-green-500" />,
       });
       setEmail("");

@@ -2,13 +2,13 @@
 
 import { Button } from '@/components/ui/button';
 import {
-    Sheet,
-    SheetContent,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
 } from '@/components/ui/sheet';
-import { Calendar, Home, Menu, Settings } from 'lucide-react';
+import { Home, Menu, Settings } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -40,14 +40,6 @@ export function Header() {
             >
               <Home className="h-4 w-4" />
               홈
-            </Link>
-            <Link 
-              href="/schedule" 
-              onClick={() => setIsOpen(false)}
-              className="flex items-center gap-3 px-3 py-2 text-sm font-medium hover:bg-accent rounded-md transition-colors"
-            >
-              <Calendar className="h-4 w-4" />
-              일정 목록
             </Link>
             <Link 
               href="#" 
