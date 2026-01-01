@@ -6,8 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Skeleton } from '@/components/ui/skeleton';
 import { getIpoDetail } from '@/lib/api';
+import { calculateIpoScore } from '@/lib/ipo-calculator';
 import { useQuery } from '@tanstack/react-query';
-import { BarChart3, Building2, Calendar, ChevronLeft } from 'lucide-react';
+import { BarChart3, Building2, Calendar, ChevronLeft, TrendingUp } from 'lucide-react';
 import { useParams, useRouter } from 'next/navigation';
 
 export default function IpoDetailPage() {
@@ -103,6 +104,32 @@ export default function IpoDetailPage() {
                     </div>
                 </CardContent>
             </Card>
+
+            {/* Analysis Score Card */}
+            {(() => {
+                // Inline calculation or use memo if expensive, but it's cheap here
+                const scoreResult = calculateIpoScore(ipo);
+                return (
+                    <div className="mt-8 mb-6">
+                        <h3 className="text-lg font-semibold flex items-center gap-2 mb-4">
+                            <TrendingUp className="w-5 h-5 text-gray-500" />
+                            AI 예상 수익률 분석
+                        </h3>
+                        <Card className={`border-none shadow-sm ${scoreResult.bgClass}`}>
+                            <CardContent className="p-4 py-0">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <div className={`text-2xl font-extrabold ${scoreResult.colorClass}`}>
+                                            {scoreResult.grade}
+                                        </div>
+                                        <p className="text-xs text-muted-foreground mt-1 opacity-80">{scoreResult.description}</p>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                );
+            })()}
 
             {/* Schedule Info */}
             <div className="space-y-4">
