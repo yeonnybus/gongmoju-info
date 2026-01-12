@@ -1,5 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
+import { CrawlerService } from '../crawler/crawler.service';
 import { MailService } from '../mail/mail.service';
 import { PrismaService } from '../prisma/prisma.service';
 
@@ -10,7 +11,20 @@ export class SchedulerService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly mailService: MailService,
+    private readonly crawlerService: CrawlerService,
   ) {}
+
+  // Run every day at 09:00 AM KST
+  @Cron('0 9 * * *', { timeZone: 'Asia/Seoul' })
+  async runDailyCrawling() {
+    this.logger.log('Starting daily IPO crawling...');
+    try {
+      const result = await this.crawlerService.scrapeIpoList();
+      this.logger.log(`Daily crawling completed. Processed ${result.count} items.`);
+    } catch (error) {
+      this.logger.error('Daily crawling failed:', error);
+    }
+  }
 
   // Run every Monday at 08:30 AM KST
   @Cron('30 8 * * 1', { timeZone: 'Asia/Seoul' })

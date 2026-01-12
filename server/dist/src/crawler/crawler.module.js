@@ -18,7 +18,8 @@ exports.CrawlerModule = CrawlerModule = __decorate([
     (0, common_1.Module)({
         imports: [prisma_module_1.PrismaModule],
         providers: [crawler_service_1.CrawlerService],
-        controllers: [crawler_controller_1.CrawlerController]
+        controllers: [crawler_controller_1.CrawlerController],
+        exports: [crawler_service_1.CrawlerService],
     })
 ], CrawlerModule);
 //# sourceMappingURL=crawler.module.js.map
