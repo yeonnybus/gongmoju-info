@@ -1,13 +1,18 @@
 import { ValidationPipe } from '@nestjs/common';
-import { NestFactory } from '@nestjs/core';
+import { HttpAdapterHost, NestFactory } from '@nestjs/core';
 import helmet from 'helmet';
 import { AppModule } from './app.module';
+import { AllExceptionsFilter } from './common/filters/all-exceptions.filter';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   
   // Security: HTTP Headers
   app.use(helmet());
+  
+  // Error Handling: Global Exception Filter
+  const httpAdapterHost = app.get(HttpAdapterHost);
+  app.useGlobalFilters(new AllExceptionsFilter(httpAdapterHost));
   
   // Security: CORS - Restrict to allowed origins
   const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || [
