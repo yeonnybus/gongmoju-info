@@ -17,9 +17,7 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
-import { Skeleton } from "@/components/ui/skeleton";
-import { getIpoList } from '@/lib/api';
-import { useQuery } from '@tanstack/react-query';
+import type { Ipo } from "@/lib/api.server";
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
@@ -27,23 +25,22 @@ type SortOption = 'latest' | 'oldest' | 'name';
 
 const ITEMS_PER_PAGE = 10;
 
-export function WeeklyList() {
+interface WeeklyListProps {
+    ipoList: Ipo[];
+}
+
+export function WeeklyList({ ipoList }: WeeklyListProps) {
     const [currentPage, setCurrentPage] = useState(1);
     const [sortBy, setSortBy] = useState<SortOption>('latest');
 
-    const { data: ipoList, isLoading } = useQuery({
-        queryKey: ['ipoList'],
-        queryFn: getIpoList,
-    });
-
     // Sort and paginate data
-    const { sortedList, totalPages, paginatedList } = useMemo(() => {
+    const { totalPages, paginatedList } = useMemo(() => {
         if (!ipoList || ipoList.length === 0) {
             return { sortedList: [], totalPages: 0, paginatedList: [] };
         }
 
         // Sort
-        const sorted = [...ipoList].sort((a: any, b: any) => {
+        const sorted = [...ipoList].sort((a, b) => {
             switch (sortBy) {
                 case 'latest':
                     return new Date(b.subStart || 0).getTime() - new Date(a.subStart || 0).getTime();
@@ -70,17 +67,6 @@ export function WeeklyList() {
         setCurrentPage(1);
     };
 
-    if (isLoading) {
-        return (
-            <div className="space-y-4">
-                <Skeleton className="h-16 w-full rounded-xl" />
-                <Skeleton className="h-16 w-full rounded-xl" />
-                <Skeleton className="h-16 w-full rounded-xl" />
-                <Skeleton className="h-16 w-full rounded-xl" />
-            </div>
-        )
-    }
-
     if (!ipoList || ipoList.length === 0) {
         return <div className="text-center py-10 text-gray-500">예정된 일정이 없습니다.</div>;
     }
@@ -103,7 +89,7 @@ export function WeeklyList() {
 
             {/* List */}
             <div className="space-y-1">
-                {paginatedList.map((item: any, index: number) => {
+                {paginatedList.map((item, index: number) => {
                     // Simple status logic
                     const today = new Date();
                     const startDate = item.subStart ? new Date(item.subStart) : null;

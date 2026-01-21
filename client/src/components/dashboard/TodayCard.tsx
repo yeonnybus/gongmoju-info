@@ -3,26 +3,19 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { getIpoList } from '@/lib/api';
-import { useQuery } from '@tanstack/react-query';
+import type { Ipo } from "@/lib/api.server";
 import { Bell } from "lucide-react";
 
-export function TodayCard() {
-  const { data: ipoList, isLoading } = useQuery({
-        queryKey: ['ipoList'],
-        queryFn: getIpoList,
-  });
+interface TodayCardProps {
+  ipoList: Ipo[];
+}
 
-  if (isLoading) {
-      return <Skeleton className="h-48 w-full rounded-xl" />;
-  }
-
+export function TodayCard({ ipoList }: TodayCardProps) {
   // Find "Today's" highlight
   // Prioritize: Open for Subscription > Listing Today
   const today = new Date();
   
-  const todayHighlight = ipoList?.find((item: any) => {
+  const todayHighlight = ipoList?.find((item) => {
       if (!item.subStart || !item.subEnd) return false;
       const start = new Date(item.subStart);
       const end = new Date(item.subEnd);
