@@ -19,6 +19,8 @@ export function TodayCard({ ipoList }: TodayCardProps) {
       if (!item.subStart || !item.subEnd) return false;
       const start = new Date(item.subStart);
       const end = new Date(item.subEnd);
+      // Set end to end of day (23:59:59) to include the entire last day
+      end.setHours(23, 59, 59, 999);
       return today >= start && today <= end;
   });
 

@@ -93,7 +93,11 @@ export function WeeklyList({ ipoList }: WeeklyListProps) {
                     // Simple status logic
                     const today = new Date();
                     const startDate = item.subStart ? new Date(item.subStart) : null;
+                    // Set endDate to end of day (23:59:59) to include the entire last day
                     const endDate = item.subEnd ? new Date(item.subEnd) : null;
+                    if (endDate) {
+                        endDate.setHours(23, 59, 59, 999);
+                    }
 
                     let status = 'UPCOMING';
                     if (startDate && endDate) {

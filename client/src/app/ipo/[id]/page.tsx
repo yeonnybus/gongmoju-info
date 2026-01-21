@@ -49,7 +49,11 @@ export default function IpoDetailPage() {
     // Status Determination
     const today = new Date();
     const startDate = ipo.subStart ? new Date(ipo.subStart) : null;
+    // Set endDate to end of day (23:59:59) to include the entire last day
     const endDate = ipo.subEnd ? new Date(ipo.subEnd) : null;
+    if (endDate) {
+        endDate.setHours(23, 59, 59, 999);
+    }
     
     let status = '예정';
     let statusColor = "bg-gray-500";
