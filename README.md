@@ -10,6 +10,9 @@
 
 공모주 알리미는 흩어져 있는 IPO 정보를 수집하여 데이터 기반의 인사이트를 제공하는 **모바일 환경 최적화 웹 서비스**입니다. 실시간 데이터 스크래핑부터 매주 월요일 아침 자동 리포트 발송까지, 전체 워크플로우를 자동화하여 투자자의 생산성을 극대화합니다.
 
+Web Link : https://gongmoju-info-client.vercel.app/
+
+
 ---
 
 ## ⚡️ Full Vibe Coding: AI Native Development
