@@ -27,7 +27,7 @@ export function EmailSubscription() {
       await requestVerificationCode(email);
       setIsDialogOpen(true);
       toast.success("인증번호가 발송되었습니다! 메일함을 확인해주세요.");
-    } catch (error) {
+    } catch {
       toast.error("인증번호 발송에 실패했습니다. 다시 시도해주세요.");
     } finally {
       setIsLoading(false);
@@ -50,7 +50,7 @@ export function EmailSubscription() {
       });
       setEmail("");
       setVerifyCode("");
-    } catch (error) {
+    } catch {
       toast.error("인증번호가 올바르지 않습니다.");
     } finally {
       setIsLoading(false);
@@ -59,26 +59,29 @@ export function EmailSubscription() {
 
   return (
     <>
-      <Card className="w-full border-dashed border-2 border-primary/20 bg-primary/5">
+      <Card className="w-full rounded-3xl border border-zinc-200 bg-gradient-to-b from-amber-50/70 to-white shadow-sm">
         <CardHeader className="pb-3 text-center">
-          <div className="mx-auto bg-primary/10 p-3 rounded-full w-fit mb-2">
-            <Mail className="h-6 w-6 text-primary" />
+          <div className="mx-auto mb-2 w-fit rounded-2xl border border-amber-100 bg-white p-3 shadow-sm">
+            <Mail className="h-6 w-6 text-amber-500" aria-hidden="true" />
           </div>
-          <CardTitle className="text-lg">주간 리포트 구독</CardTitle>
-          <CardDescription>
+          <CardTitle className="text-[20px] font-extrabold tracking-[-0.02em] text-zinc-900">주간 리포트 구독</CardTitle>
+          <CardDescription className="text-sm text-zinc-500">
             매주 월요일 아침 9시, 공모주 핵심 요약을 메일로 보내드려요.
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex gap-2">
+          <div className="flex gap-2.5">
+            <label htmlFor="subscription-email" className="sr-only">이메일 주소</label>
             <Input 
+              id="subscription-email"
+              type="email"
               placeholder="example@email.com" 
               value={email} 
               onChange={(e) => setEmail(e.target.value)}
-              className="bg-background"
+              className="h-11 rounded-xl border-zinc-200 bg-white placeholder:text-zinc-400"
             />
-            <Button onClick={handleRequestCode} disabled={isLoading}>
-              {isLoading ? <Loader2 className="animate-spin" /> : "구독"}
+            <Button onClick={handleRequestCode} disabled={isLoading} className="h-11 rounded-xl bg-zinc-900 px-5 font-semibold hover:bg-zinc-800">
+              {isLoading ? <Loader2 className="animate-spin" aria-hidden="true" /> : "구독"}
             </Button>
           </div>
         </CardContent>
@@ -86,7 +89,7 @@ export function EmailSubscription() {
 
       {/* Verification Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-md w-11/12 rounded-lg">
+        <DialogContent className="w-11/12 rounded-2xl border-zinc-200 sm:max-w-md">
           <DialogHeader>
             <DialogTitle>이메일 인증</DialogTitle>
             <DialogDescription>
@@ -95,21 +98,24 @@ export function EmailSubscription() {
           </DialogHeader>
           <div className="flex items-center space-x-2 py-4">
              <div className="grid flex-1 gap-2">
+                <label htmlFor="verification-code" className="sr-only">인증번호 6자리</label>
                 <Input 
+                  id="verification-code"
                   placeholder="123456" 
                   value={verifyCode}
                   onChange={(e) => setVerifyCode(e.target.value)}
-                  className="text-center text-lg tracking-widest"
+                  className="h-11 rounded-xl border-zinc-200 text-center text-lg font-semibold tracking-[0.35em]"
                   maxLength={6}
+                  inputMode="numeric"
                 />
              </div>
           </div>
           <DialogFooter className="flex flex-row justify-end gap-2">
              <Button variant="secondary" onClick={() => setIsDialogOpen(false)}>취소</Button>
-             <Button onClick={handleVerify} disabled={isLoading}>
-               {isLoading ? <Loader2 className="animate-spin" /> : "확인"}
-             </Button>
-          </DialogFooter>
+              <Button onClick={handleVerify} disabled={isLoading}>
+                {isLoading ? <Loader2 className="animate-spin" aria-hidden="true" /> : "확인"}
+              </Button>
+            </DialogFooter>
         </DialogContent>
       </Dialog>
     </>

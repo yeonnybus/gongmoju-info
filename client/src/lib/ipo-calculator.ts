@@ -29,7 +29,7 @@ export function calculateIpoScore(ipo: IpoData): ScoreResult {
     let lockupScore = 0;
     let supplyScore = 0;
     let otcScore = 0;
-    let listingScore = 0; // 동시상장 여부 (데이터 없음)
+    const listingScore = 0; // 동시상장 여부 (데이터 없음)
     
     // Check for missing key data
     const isCompetitionMissing = !ipo.competition || ipo.competition === '-' || ipo.competition.trim() === '';

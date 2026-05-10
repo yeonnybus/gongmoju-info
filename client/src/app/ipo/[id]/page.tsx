@@ -2,19 +2,40 @@
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Skeleton } from '@/components/ui/skeleton';
 import { getIpoDetail } from '@/lib/api';
 import { calculateIpoScore } from '@/lib/ipo-calculator';
 import { useQuery } from '@tanstack/react-query';
-import { BarChart3, Building2, Calendar, ChevronLeft, TrendingUp } from 'lucide-react';
-import { useParams, useRouter } from 'next/navigation';
+import { BarChart3, Building2, Calendar, ChevronLeft, CircleDollarSign, Lock, Package, TrendingUp } from 'lucide-react';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 
 export default function IpoDetailPage() {
     const params = useParams();
     const router = useRouter();
+    const searchParams = useSearchParams();
     const id = params.id as string;
+
+    const getReturnPath = () => {
+        const page = searchParams.get('page');
+        const sort = searchParams.get('sort');
+        const query = new URLSearchParams();
+
+        if (page) query.set('page', page);
+        if (sort) query.set('sort', sort);
+
+        const queryString = query.toString();
+        return queryString ? `/?${queryString}` : '/';
+    };
+
+    const handleBack = () => {
+        if (typeof window !== 'undefined' && window.history.length > 1) {
+            router.back();
+            return;
+        }
+        router.push(getReturnPath());
+    };
 
     const { data: ipo, isLoading, isError } = useQuery({
         queryKey: ['ipo', id],
@@ -36,7 +57,7 @@ export default function IpoDetailPage() {
         return (
             <div className="container max-w-md mx-auto p-4 flex flex-col items-center justify-center h-[50vh]">
                 <p className="text-muted-foreground mb-4">데이터를 불러올 수 없습니다.</p>
-                <Button onClick={() => router.back()}>뒤로가기</Button>
+                <Button onClick={handleBack}>뒤로가기</Button>
             </div>
         );
     }
@@ -44,6 +65,11 @@ export default function IpoDetailPage() {
     const formatDate = (dateStr?: string) => {
         if (!dateStr) return '미정';
         return new Date(dateStr).toLocaleDateString('ko-KR', { year: '2-digit', month: '2-digit', day: '2-digit' }).replace(/\. /g, '.');
+    };
+
+    const formatMonthDay = (dateStr?: string) => {
+        if (!dateStr) return '-';
+        return new Date(dateStr).toLocaleDateString('ko-KR', { month: '2-digit', day: '2-digit' }).replace(/\. /g, '.').replace('.', '월 ').replace('.', '일');
     };
 
     // Status Determination
@@ -56,186 +82,152 @@ export default function IpoDetailPage() {
     }
     
     let status = '예정';
-    let statusColor = "bg-gray-500";
+    let statusTone = 'border-zinc-300 bg-zinc-100 text-zinc-700';
 
     if (startDate && endDate) {
         if (today >= startDate && today <= endDate) {
             status = '청약중';
-            statusColor = "bg-orange-500";
+            statusTone = 'border-orange-200 bg-orange-50 text-orange-600';
         } else if (today > endDate) {
             status = '마감';
-            statusColor = "bg-slate-500";
+            statusTone = 'border-zinc-200 bg-zinc-100 text-zinc-500';
         }
     }
 
     return (
-        <div className="container max-w-md mx-auto p-4 pb-20 fade-in select-none">
-            {/* Header */}
-            <div className="flex items-center mb-6">
-                <Button variant="ghost" size="icon" onClick={() => router.back()} className="-ml-2">
+        <div className="container mx-auto max-w-[430px] space-y-3.5 px-4 pb-20 pt-2">
+            <header className="sticky top-0 z-20 -mx-4 mb-2 flex h-12 items-center border-b border-zinc-200/70 bg-background/90 px-4 backdrop-blur-md supports-[backdrop-filter]:bg-background/80">
+                <Button variant="ghost" size="icon" onClick={handleBack} className="-ml-2 rounded-full" aria-label="뒤로가기">
                     <ChevronLeft className="h-6 w-6" />
                 </Button>
-                <h1 className="text-xl font-bold ml-2">상세 정보</h1>
-            </div>
+                <h1 className="ml-2 text-[17px] font-semibold tracking-tight text-zinc-800">상세 정보</h1>
+            </header>
 
-            {/* Title Section */}
-            <div className="mb-8">
-                <Badge className={`mb-2 hover:${statusColor} ${statusColor} text-white border-0`}>{status}</Badge>
-                <h2 className="text-3xl font-extrabold tracking-tight">{ipo.name}</h2>
-                <div className="flex items-center text-muted-foreground mt-1 text-sm">
-                    <span>{ipo.market || '시장 미정'}</span>
-                    <Separator orientation="vertical" className="h-3 mx-2" />
-                    <span>{ipo.code || '코드 미정'}</span>
-                </div>
-            </div>
-
-            {/* Price Info */}
-            <Card className="mb-6 border-none shadow-sm bg-secondary/30">
-                <CardContent className="p-4 flex justify-between items-center">
-                    <div className="flex flex-col">
-                        <span className="text-sm text-muted-foreground mb-1">확정공모가</span>
-                        <span className="text-2xl font-bold text-primary">
-                            {ipo.offerPrice ? `${Number(ipo.offerPrice).toLocaleString()}원` : '미정'}
-                        </span>
+            <Card className="gap-0 rounded-3xl border border-zinc-200/80 bg-white py-0 shadow-[0_4px_14px_rgba(15,23,42,0.06)]">
+                <CardContent className="px-5 py-4">
+                    <div className="mb-2 flex items-center justify-between">
+                        <Badge className={`rounded-full border px-2.5 py-0.5 text-[11px] font-semibold ${statusTone}`}>{status}</Badge>
                     </div>
-                    <div className="text-right">
-                         <span className="text-xs text-muted-foreground block mb-1">희망공모가 밴드</span>
-                         <span className="text-sm font-medium">
-                            {ipo.bandLow && ipo.bandHigh 
-                              ? `${Number(ipo.bandLow).toLocaleString()} ~ ${Number(ipo.bandHigh).toLocaleString()}` 
-                              : '-'}
-                         </span>
+                    <h2 className="text-[26px] font-extrabold leading-[1.2] tracking-[-0.03em] text-zinc-900">{ipo.name}</h2>
+                    <div className="mt-1.5 flex items-center text-[13px] text-zinc-500">
+                        <span>{ipo.market || '시장 미정'}</span>
+                        <Separator orientation="vertical" className="mx-2 h-3" />
+                        <span>{ipo.code || '코드 미정'}</span>
+                    </div>
+                    <div className="mt-4 grid grid-cols-[1fr_auto] items-end gap-3 rounded-2xl bg-zinc-50 px-3.5 py-3">
+                        <div>
+                            <p className="text-[11px] font-medium text-zinc-500">확정공모가</p>
+                            <p className="mt-1 text-[42px] font-extrabold leading-none tracking-[-0.03em] text-zinc-950">
+                                {ipo.offerPrice ? `${Number(ipo.offerPrice).toLocaleString()}원` : '미정'}
+                            </p>
+                        </div>
+                        <div className="rounded-xl border border-zinc-200 bg-white px-3 py-2 text-right">
+                            <p className="text-[10px] font-medium text-zinc-500">희망공모가 밴드</p>
+                            <p className="mt-1 text-base font-bold text-zinc-700">
+                                {ipo.bandLow && ipo.bandHigh
+                                    ? `${Number(ipo.bandLow).toLocaleString()} ~ ${Number(ipo.bandHigh).toLocaleString()}원`
+                                    : '-'}
+                            </p>
+                        </div>
                     </div>
                 </CardContent>
             </Card>
 
-            {/* Analysis Score Card */}
+            <Card className="gap-0 overflow-hidden rounded-2xl border border-zinc-200/80 bg-white py-0 shadow-[0_2px_10px_rgba(15,23,42,0.05)]">
+                <CardContent className="p-0">
+                    <div className="flex items-center justify-between border-b border-zinc-200 px-3.5 py-2.5">
+                        <p className="flex items-center gap-1.5 text-sm font-semibold text-zinc-800">
+                            <Calendar className="h-4 w-4 text-zinc-500" />
+                            청약 일정
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-2 divide-x divide-zinc-200">
+                        <div className="px-3.5 py-3.5 text-center">
+                            <p className="text-[11px] text-zinc-500">청약일</p>
+                            <p className="mt-1 text-[24px] font-bold leading-tight tracking-[-0.02em] text-zinc-900">
+                                {formatMonthDay(ipo.subStart)}
+                            </p>
+                            <p className="text-sm font-semibold text-zinc-600">~ {formatMonthDay(ipo.subEnd)}</p>
+                        </div>
+                        <div className="px-3.5 py-3.5 text-center">
+                            <p className="text-[11px] text-zinc-500">상장일</p>
+                            <p className="mt-1 text-[24px] font-bold leading-tight tracking-[-0.02em] text-blue-600">
+                                {formatMonthDay(ipo.listDate)}
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex items-center justify-between border-t border-zinc-200 bg-zinc-50 px-3.5 py-2.5">
+                        <span className="text-sm text-zinc-500">환불일</span>
+                        <span className="text-sm font-semibold text-zinc-700">{formatDate(ipo.refundDate)}</span>
+                    </div>
+                </CardContent>
+            </Card>
+
             {(() => {
-                // Inline calculation or use memo if expensive, but it's cheap here
                 const scoreResult = calculateIpoScore(ipo);
                 return (
-                    <div className="mt-8 mb-6">
-                        <h3 className="text-lg font-semibold flex items-center gap-2 mb-4">
-                            <TrendingUp className="w-5 h-5 text-gray-500" />
-                            AI 예상 수익률 분석
-                        </h3>
-                        <Card className={`border-none shadow-sm ${scoreResult.bgClass}`}>
-                            <CardContent className="p-4 py-0">
-                                <div className="flex items-center justify-between">
-                                    <div>
-                                        <div className={`text-2xl font-extrabold ${scoreResult.colorClass}`}>
-                                            {scoreResult.grade}
-                                        </div>
-                                        <p className="text-xs text-muted-foreground mt-1 opacity-80">{scoreResult.description}</p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </div>
+                    <Card className={`gap-0 rounded-2xl border-0 py-0 shadow-sm ${scoreResult.bgClass}`}>
+                        <CardContent className="p-4">
+                            <p className="mb-2 flex items-center gap-1.5 text-sm font-semibold text-zinc-700">
+                                <TrendingUp className="h-4 w-4" /> AI 예상 수익률 분석
+                            </p>
+                            <p className={`text-[34px] font-extrabold leading-tight tracking-[-0.03em] ${scoreResult.colorClass}`}>
+                                {scoreResult.grade}
+                            </p>
+                            <p className="mt-1 text-sm text-zinc-600">{scoreResult.description}</p>
+                        </CardContent>
+                    </Card>
                 );
             })()}
 
-            {/* Schedule Info */}
-            <div className="space-y-4">
-                <h3 className="text-lg font-semibold flex items-center gap-2">
-                    <Calendar className="w-5 h-5 text-gray-500" />
-                    청약 일정
-                </h3>
-                <Card>
-                    <CardContent className="p-0">
-                         <div className="grid grid-cols-2 divide-x">
-                            <div className="p-4 flex flex-col items-center justify-center text-center">
-                                <span className="text-sm text-muted-foreground mb-1">청약일</span>
-                                <span className="font-semibold">
-                                    {ipo.subStart ? formatDate(ipo.subStart).slice(3) : '-'} ~ {ipo.subEnd ? formatDate(ipo.subEnd).slice(3) : '-'}
-                                </span>
-                            </div>
-                            <div className="p-4 flex flex-col items-center justify-center text-center">
-                                <span className="text-sm text-muted-foreground mb-1">상장일</span>
-                                <span className="font-semibold text-blue-600">
-                                    {formatDate(ipo.listDate) === '미정' ? '-' : formatDate(ipo.listDate).slice(3)}
-                                </span>
-                            </div>
-                         </div>
-                         <Separator />
-                         <div className="p-4 flex justify-between items-center bg-gray-50/50">
-                            <span className="text-sm text-gray-500">환불일</span>
-                            <span className="font-medium">{formatDate(ipo.refundDate)}</span>
-                         </div>
+            <section className="grid grid-cols-2 gap-2.5">
+                <Card className="col-span-2 gap-0 rounded-2xl border border-zinc-200/80 bg-white py-0">
+                    <CardContent className="p-3.5">
+                        <p className="mb-1 flex items-center gap-1.5 text-[11px] font-medium text-zinc-500">
+                            <BarChart3 className="h-3.5 w-3.5" /> 기관경쟁률
+                        </p>
+                        <p className="text-[26px] font-extrabold leading-tight tracking-[-0.02em] text-zinc-900">{ipo.competition || '-'}</p>
                     </CardContent>
                 </Card>
-            </div>
 
-            {/* Extra Info */}
-            <div className="grid grid-cols-2 gap-4 mt-6">
-                <Card>
-                    <CardHeader className="p-4 pb-2">
-                         <CardTitle className="text-sm text-muted-foreground flex items-center gap-2">
-                             <BarChart3 className="w-4 h-4" /> 기관경쟁률
-                         </CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-4 pt-0">
-                        <div className="text-lg font-bold">
-                            {ipo.competition || '-'}
-                        </div>
+                <Card className="gap-0 rounded-2xl border border-zinc-200/80 bg-white py-0">
+                    <CardContent className="p-3.5">
+                        <p className="mb-1 flex items-center gap-1.5 text-[11px] font-medium text-zinc-500">
+                            <Building2 className="h-3.5 w-3.5" /> 주간사
+                        </p>
+                        <p className="text-base font-bold leading-snug text-zinc-900 break-keep">{ipo.underwriter || '-'}</p>
                     </CardContent>
                 </Card>
-                 <Card>
-                    <CardHeader className="p-4 pb-2">
-                         <CardTitle className="text-sm text-muted-foreground flex items-center gap-2">
-                             <Building2 className="w-4 h-4" /> 주간사
-                         </CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-4 pt-0">
-                        <div className="text-sm font-medium break-keep leading-snug">
-                            {ipo.underwriter || '-'}
-                        </div>
+
+                <Card className="gap-0 rounded-2xl border border-zinc-200/80 bg-white py-0">
+                    <CardContent className="p-3.5">
+                        <p className="mb-1 flex items-center gap-1.5 text-[11px] font-medium text-zinc-500">
+                            <Lock className="h-3.5 w-3.5" /> 의무보유확약비율
+                        </p>
+                        <p className="text-[30px] font-extrabold leading-tight tracking-[-0.02em] text-zinc-900">{ipo.lockupRate || '-'}</p>
                     </CardContent>
                 </Card>
-                <Card className="col-span-2">
-                    <CardHeader className="p-4 pb-2">
-                         <CardTitle className="text-sm text-muted-foreground flex items-center gap-2">
-                             🔒 의무보유확약비율
-                         </CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-4 pt-0">
-                        <div className="text-lg font-bold">
-                            {ipo.lockupRate || '-'}
-                        </div>
+
+                <Card className="col-span-2 gap-0 rounded-2xl border border-zinc-200/80 bg-white py-0">
+                    <CardContent className="p-3.5">
+                        <p className="mb-1 flex items-center gap-1.5 text-[11px] font-medium text-zinc-500">
+                            <Package className="h-3.5 w-3.5" /> 유통물량
+                        </p>
+                        <p className="text-[28px] font-extrabold leading-tight tracking-[-0.02em] text-zinc-900 break-all">{ipo.circulatingSupply || '-'}</p>
                     </CardContent>
                 </Card>
-                 <Card>
-                    <CardHeader className="p-4 pb-2">
-                         <CardTitle className="text-sm text-muted-foreground flex items-center gap-2">
-                             📊 유통물량
-                         </CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-4 pt-0">
-                        <div className="text-lg font-bold break-all">
-                            {ipo.circulatingSupply || '-'}
-                        </div>
-                    </CardContent>
-                </Card>
-                <Card>
-                    <CardHeader className="p-4 pb-2">
-                         <CardTitle className="text-sm text-muted-foreground flex items-center gap-2">
-                             💰 장외가
-                         </CardTitle>
-                    </CardHeader>
-                    <CardContent className="p-4 pt-0">
-                        <div className="text-lg font-bold">
+
+                <Card className="col-span-2 gap-0 rounded-2xl border border-zinc-200/80 bg-white py-0">
+                    <CardContent className="p-3.5">
+                        <p className="mb-1 flex items-center gap-1.5 text-[11px] font-medium text-zinc-500">
+                            <CircleDollarSign className="h-3.5 w-3.5" /> 장외가
+                        </p>
+                        <p className="text-[34px] font-extrabold leading-tight tracking-[-0.02em] text-zinc-900">
                             {ipo.otcPrice ? `${ipo.otcPrice}원` : '-'}
-                        </div>
+                        </p>
                     </CardContent>
                 </Card>
-            </div>
-            
-            {/* Bottom Action Area (Placeholder for Subscription Link) */}
-             <div className="fixed bottom-0 left-0 right-0 p-4 bg-background/80 backdrop-blur-md border-t hidden">
-                 <Button className="w-full max-w-md mx-auto h-12 text-lg font-bold">
-                     청약 바로가기 (준비중)
-                 </Button>
-             </div>
+            </section>
         </div>
     );
 }

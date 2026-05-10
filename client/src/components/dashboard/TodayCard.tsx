@@ -1,10 +1,9 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Ipo } from "@/lib/api.server";
-import { Bell } from "lucide-react";
+import Link from "next/link";
 
 interface TodayCardProps {
   ipoList: Ipo[];
@@ -26,18 +25,17 @@ export function TodayCard({ ipoList }: TodayCardProps) {
 
   if (!todayHighlight) {
     return (
-      <Card className="w-full bg-gradient-to-br from-gray-900 to-gray-800 border-none text-white shadow-lg relative overflow-hidden">
-         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -translate-y-16 translate-x-16 blur-2xl"></div>
+      <Card className="w-full overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-50 shadow-sm">
         <CardHeader className="pb-2">
-          <CardTitle className="text-lg flex items-center gap-2">
-            오늘의 일정 🌙
+          <CardTitle className="flex items-center gap-2 text-lg font-bold text-zinc-900">
+            오늘의 일정
           </CardTitle>
-          <CardDescription className="text-gray-400">
+          <CardDescription className="text-zinc-500">
             오늘은 진행 중인 청약이 없습니다.
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="text-sm text-gray-300">
+          <div className="text-sm text-zinc-600">
             주간 일정을 확인하고 미리 준비해보세요!
           </div>
         </CardContent>
@@ -48,35 +46,30 @@ export function TodayCard({ ipoList }: TodayCardProps) {
   // Calculate D-Day or status
   // For now simple display
   return (
-    <Card className="w-full bg-gradient-to-br from-indigo-900 to-slate-900 border-none text-white shadow-xl relative overflow-hidden">
-      {/* Background Effect */}
-      <div className="absolute top-0 right-0 w-40 h-40 bg-purple-500/20 rounded-full -translate-y-10 translate-x-10 blur-3xl"></div>
-      
-      <CardHeader>
-        <div className="flex justify-between items-start">
-            <Badge variant="secondary" className="bg-orange-500 hover:bg-orange-600 text-white border-none mb-2">
-                청약 진행중
+    <Link href={`/ipo/${todayHighlight.id}`} className="group block rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+      <Card className="w-full overflow-hidden rounded-3xl border border-zinc-200 bg-card shadow-sm transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md">
+        <CardHeader className="pb-3">
+          <div className="flex justify-between items-start">
+            <Badge variant="secondary" className="mb-2 border border-orange-200 bg-orange-50 text-orange-600">
+              청약 진행중
             </Badge>
-            <Button size="icon" variant="ghost" className="text-gray-300 hover:text-white h-6 w-6">
-                <Bell size={16} />
-            </Button>
-        </div>
-        <CardTitle className="text-2xl font-bold tracking-tight">{todayHighlight.name}</CardTitle>
-        <CardDescription className="text-gray-300 font-medium">
+          </div>
+          <CardTitle className="text-[24px] font-extrabold leading-tight tracking-[-0.02em] text-zinc-900">{todayHighlight.name}</CardTitle>
+          <CardDescription className="text-sm font-medium text-zinc-500">
             확정공모가 {todayHighlight.offerPrice ? `${Number(todayHighlight.offerPrice).toLocaleString()}원` : '미정'}
-        </CardDescription>
-      </CardHeader>
-      
-      <CardContent className="grid gap-3">
-          <div className="flex justify-between items-center text-sm border-t border-white/10 pt-3">
-              <span className="text-gray-400">경쟁률</span>
-              <span className="font-semibold text-accent-foreground text-yellow-400">{todayHighlight.competition || '-'}</span>
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-3 pt-0">
+          <div className="flex items-center justify-between border-t border-zinc-200 pt-3 text-sm">
+            <span className="text-zinc-500">기관경쟁률</span>
+            <span className="font-semibold text-zinc-900">{todayHighlight.competition || '-'}</span>
           </div>
-          <div className="flex justify-between items-center text-sm">
-              <span className="text-gray-400">주간사</span>
-              <span className="truncate max-w-[200px] text-right">{todayHighlight.underwriter}</span>
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-zinc-500">주간사</span>
+            <span className="max-w-[220px] truncate text-right font-medium text-zinc-800">{todayHighlight.underwriter || '-'}</span>
           </div>
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
+    </Link>
   );
 }

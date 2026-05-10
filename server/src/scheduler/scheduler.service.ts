@@ -14,9 +14,11 @@ export class SchedulerService {
     private readonly crawlerService: CrawlerService,
   ) {}
 
-  // Run every day at 08:29 AM and 09:30 AM KST
+  // Run every day at 08:29 AM, 09:30 AM, 03:00 PM, and 06:00 PM KST
   @Cron('29 8 * * *', { timeZone: 'Asia/Seoul' })
   @Cron('30 9 * * *', { timeZone: 'Asia/Seoul' })
+  @Cron('0 15 * * *', { timeZone: 'Asia/Seoul' })
+  @Cron('0 18 * * *', { timeZone: 'Asia/Seoul' })
   async runDailyCrawling() {
     this.logger.log('Starting daily IPO crawling...');
     try {

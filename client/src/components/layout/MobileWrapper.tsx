@@ -6,8 +6,8 @@ interface MobileWrapperProps {
 
 export function MobileWrapper({ children }: MobileWrapperProps) {
   return (
-    <div className="flex min-h-screen justify-center bg-gray-100 dark:bg-black">
-      <div className="w-full max-w-[480px] min-h-screen bg-background border-x border-border shadow-2xl overflow-hidden relative">
+    <div className="flex min-h-screen justify-center bg-gradient-to-b from-zinc-100 to-zinc-50 px-0 sm:px-4 sm:py-6">
+      <div className="relative min-h-screen w-full max-w-[500px] overflow-hidden border-x border-border bg-background shadow-xl sm:min-h-[calc(100vh-3rem)] sm:rounded-3xl sm:border">
         {children}
       </div>
     </div>

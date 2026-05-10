@@ -28,6 +28,8 @@ const API_URL = getApiUrl();
 export interface Ipo {
   id: string;
   name: string;
+  market: string | null;
+  code: string | null;
   subStart: string | null;
   subEnd: string | null;
   offerPrice: number | null;
